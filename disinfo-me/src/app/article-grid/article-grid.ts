@@ -33,20 +33,56 @@ export class ArticleGridComponent {
     return this.languageService.isPolish();
   }
 
+  isEnglish() {
+    return this.languageService.isEnglish();
+  }
+
+  isGerman() {
+    return this.languageService.isGerman();
+  }
+
+  isUkrainian() {
+    return this.languageService.isUkrainian();
+  }
+
+  isRussian() {
+    return this.languageService.isRussian();
+  }
+
   getArticleTitle(article: Article): string {
-    return this.isPolish() ? article.title : article.titleEn;
+    if (this.isPolish()) return article.title;
+    if (this.isEnglish()) return article.titleEn;
+    if (this.isGerman()) return article.titleDe || article.titleEn;
+    if (this.isUkrainian()) return article.titleUk || article.titleEn;
+    if (this.isRussian()) return article.titleRu || article.titleEn;
+    return article.titleEn;
   }
 
   getArticleExcerpt(article: Article): string {
-    return this.isPolish() ? article.excerpt : article.excerptEn;
+    if (this.isPolish()) return article.excerpt;
+    if (this.isEnglish()) return article.excerptEn;
+    if (this.isGerman()) return article.excerptDe || article.excerptEn;
+    if (this.isUkrainian()) return article.excerptUk || article.excerptEn;
+    if (this.isRussian()) return article.excerptRu || article.excerptEn;
+    return article.excerptEn;
   }
 
   getArticleCategory(article: Article): string {
-    return this.isPolish() ? article.category : article.categoryEn;
+    if (this.isPolish()) return article.category;
+    if (this.isEnglish()) return article.categoryEn;
+    if (this.isGerman()) return article.categoryDe || article.categoryEn;
+    if (this.isUkrainian()) return article.categoryUk || article.categoryEn;
+    if (this.isRussian()) return article.categoryRu || article.categoryEn;
+    return article.categoryEn;
   }
 
   getDisinformationWarning(article: Article): string {
-    return this.isPolish() ? article.disinformationWarning : article.disinformationWarningEn;
+    if (this.isPolish()) return article.disinformationWarning;
+    if (this.isEnglish()) return article.disinformationWarningEn;
+    if (this.isGerman()) return article.disinformationWarningDe || article.disinformationWarningEn;
+    if (this.isUkrainian()) return article.disinformationWarningUk || article.disinformationWarningEn;
+    if (this.isRussian()) return article.disinformationWarningRu || article.disinformationWarningEn;
+    return article.disinformationWarningEn;
   }
 
   getCategories(): string[] {
@@ -111,5 +147,32 @@ export class ArticleGridComponent {
 
   goToArticle(articleId: number) {
     this.router.navigate(['/article', articleId]);
+  }
+
+  getReadTimeText(): string {
+    if (this.isPolish()) return 'czytania';
+    if (this.isEnglish()) return 'read';
+    if (this.isGerman()) return 'Lesen';
+    if (this.isUkrainian()) return 'читання';
+    if (this.isRussian()) return 'чтения';
+    return 'read';
+  }
+
+  getLatestText(): string {
+    if (this.isPolish()) return 'NAJNOWSZE';
+    if (this.isEnglish()) return 'LATEST';
+    if (this.isGerman()) return 'NEUESTE';
+    if (this.isUkrainian()) return 'ОСТАННІ';
+    if (this.isRussian()) return 'ПОСЛЕДНИЕ';
+    return 'LATEST';
+  }
+
+  getMostReadText(): string {
+    if (this.isPolish()) return 'NAJCZYTANE';
+    if (this.isEnglish()) return 'MOST READ';
+    if (this.isGerman()) return 'MEIST GELESEN';
+    if (this.isUkrainian()) return 'НАЙЧИТАНІШІ';
+    if (this.isRussian()) return 'САМЫЕ ЧИТАЕМЫЕ';
+    return 'MOST READ';
   }
 }

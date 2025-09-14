@@ -3,7 +3,7 @@
     <!-- Back button -->
     <div class="back-button">
       <button (click)="goBack()" class="btn-back">
-        ← {{ isPolish() ? 'Powrót do strony głównej' : 'Back to main page' }}
+        ← {{ getBackText() }}
       </button>
     </div>
 
@@ -34,7 +34,7 @@
 
       <!-- Extended content -->
       <div class="article-body">
-        <h2>{{ isPolish() ? 'Szczegóły' : 'Details' }}</h2>
+        <h2>{{ getDetailsText() }}</h2>
         <p *ngIf="isPolish()">
           {{ getExtendedContent(article) }}
         </p>
@@ -42,7 +42,7 @@
           {{ getExtendedContentEn(article) }}
         </p>
 
-        <h3>{{ isPolish() ? 'Dlaczego to dezinformacja?' : 'Why is this disinformation?' }}</h3>
+        <h3>{{ getWhyDisinformationText() }}</h3>
         <p *ngIf="isPolish()">
           {{ getDisinformationExplanation(article) }}
         </p>
@@ -50,7 +50,7 @@
           {{ getDisinformationExplanationEn(article) }}
         </p>
 
-        <h3>{{ isPolish() ? 'Jak weryfikować informacje?' : 'How to verify information?' }}</h3>
+        <h3>{{ getHowToVerifyText() }}</h3>
         <ul>
           <li *ngIf="isPolish()">Sprawdź źródło informacji w wiarygodnych mediach</li>
           <li *ngIf="isPolish()">Zweryfikuj dane w oficjalnych dokumentach</li>
@@ -66,7 +66,7 @@
 
     <!-- Related articles -->
     <aside class="related-articles" *ngIf="relatedArticles.length > 0">
-      <h3>{{ isPolish() ? 'Powiązane artykuły' : 'Related articles' }}</h3>
+      <h3>{{ getRelatedArticlesText() }}</h3>
       <div class="related-grid">
         <article class="related-article" *ngFor="let relatedArticle of relatedArticles">
           <div class="related-image">
@@ -94,10 +94,10 @@
 
 <div class="article-not-found" *ngIf="!article">
   <div class="container">
-    <h1>{{ isPolish() ? 'Artykuł nie został znaleziony' : 'Article not found' }}</h1>
-    <p>{{ isPolish() ? 'Przepraszamy, ale artykuł o podanym ID nie istnieje.' : 'Sorry, but the article with the given ID does not exist.' }}</p>
+    <h1>{{ getArticleNotFoundText() }}</h1>
+    <p>{{ getArticleNotFoundDescription() }}</p>
     <button (click)="goBack()" class="btn-back">
-      {{ isPolish() ? 'Powrót do strony głównej' : 'Back to main page' }}
+      {{ getBackText() }}
     </button>
   </div>
 </div>

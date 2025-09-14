@@ -4,21 +4,39 @@ export interface Article {
   id: number;
   title: string;
   titleEn: string;
+  titleDe?: string;
+  titleUk?: string;
+  titleRu?: string;
   excerpt: string;
   excerptEn: string;
+  excerptDe?: string;
+  excerptUk?: string;
+  excerptRu?: string;
   extendedContent?: string;
   extendedContentEn?: string;
+  extendedContentDe?: string;
+  extendedContentUk?: string;
+  extendedContentRu?: string;
   disinformationExplanation?: string;
   disinformationExplanationEn?: string;
+  disinformationExplanationDe?: string;
+  disinformationExplanationUk?: string;
+  disinformationExplanationRu?: string;
   author: string;
   date: string;
   category: string;
   categoryEn: string;
+  categoryDe?: string;
+  categoryUk?: string;
+  categoryRu?: string;
   imageUrl: string;
   readTime: string;
   isDisinformation: boolean;
   disinformationWarning: string;
   disinformationWarningEn: string;
+  disinformationWarningDe?: string;
+  disinformationWarningUk?: string;
+  disinformationWarningRu?: string;
 }
 
 @Injectable({

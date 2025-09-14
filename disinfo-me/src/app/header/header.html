@@ -7,22 +7,40 @@
           <span class="weather">Warszawa, 15°C</span>
         </div>
         <div class="header-actions">
-          <div class="language-switcher">
-            <button 
-              class="lang-btn" 
-              [class.active]="isPolish()"
-              (click)="switchLanguage('pl')">
-              PL
-            </button>
-            <button 
-              class="lang-btn" 
-              [class.active]="!isPolish()"
-              (click)="switchLanguage('en')">
-              EN
-            </button>
-          </div>
-          <a href="#" class="subscribe-btn">{{ isPolish() ? 'Prenumerata' : 'Subscribe' }}</a>
-          <a href="#" class="login-btn">{{ isPolish() ? 'Zaloguj się' : 'Login' }}</a>
+                 <div class="language-switcher">
+                   <button
+                     class="lang-btn"
+                     [class.active]="isPolish()"
+                     (click)="switchLanguage('pl')">
+                     PL
+                   </button>
+                   <button
+                     class="lang-btn"
+                     [class.active]="isEnglish()"
+                     (click)="switchLanguage('en')">
+                     EN
+                   </button>
+                   <button
+                     class="lang-btn"
+                     [class.active]="isGerman()"
+                     (click)="switchLanguage('de')">
+                     DE
+                   </button>
+                   <button
+                     class="lang-btn"
+                     [class.active]="isUkrainian()"
+                     (click)="switchLanguage('uk')">
+                     UK
+                   </button>
+                   <button
+                     class="lang-btn"
+                     [class.active]="isRussian()"
+                     (click)="switchLanguage('ru')">
+                     RU
+                   </button>
+                 </div>
+          <a href="#" class="subscribe-btn">{{ getSubscribeText() }}</a>
+          <a href="#" class="login-btn">{{ getLoginText() }}</a>
         </div>
       </div>
     </div>
@@ -33,7 +51,7 @@
       <div class="header-main-content">
         <div class="logo">
           <h1>Disinfo Me</h1>
-          <p class="tagline">{{ isPolish() ? 'Edukacyjny projekt o dezinformacji' : 'Educational project about disinformation' }}</p>
+          <p class="tagline">{{ getTaglineText() }}</p>
         </div>
         
                <nav class="main-nav">
@@ -82,7 +100,7 @@
                </nav>
         
         <div class="header-search">
-          <input type="text" [placeholder]="isPolish() ? 'Szukaj...' : 'Search...'" class="search-input">
+          <input type="text" [placeholder]="getSearchPlaceholder()" class="search-input">
           <button class="search-btn">🔍</button>
         </div>
       </div>
@@ -91,10 +109,10 @@
   
   <div class="header-bottom">
     <div class="container">
-      <div class="breaking-news">
-        <span class="breaking-label">{{ isPolish() ? 'NAJNOWSZE:' : 'LATEST:' }}</span>
-        <span class="breaking-text">{{ isPolish() ? 'Eksperci ostrzegają przed rosnącą falą dezinformacji w mediach społecznościowych' : 'Experts warn about growing wave of disinformation on social media' }}</span>
-      </div>
+    <div class="breaking-news">
+      <span class="breaking-label">{{ getBreakingNewsText() }}</span>
+      <span class="breaking-text">{{ getBreakingNewsContent() }}</span>
+    </div>
     </div>
   </div>
 </header>

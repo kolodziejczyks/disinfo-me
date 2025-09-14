@@ -24,18 +24,25 @@ export class CategoryFilterService {
     return this.currentCategory() === 'ALL';
   }
 
-  getCategoryDisplayName(category: Category, isPolish: boolean): string {
-    const categoryMap: { [key in Category]: { pl: string; en: string } } = {
-      'ALL': { pl: 'Wszystkie', en: 'All' },
-      'POLITYKA': { pl: 'Polityka', en: 'Politics' },
-      'GOSPODARKA': { pl: 'Gospodarka', en: 'Economy' },
-      'SPOŁECZEŃSTWO': { pl: 'Społeczeństwo', en: 'Society' },
-      'ŚWIAT': { pl: 'Świat', en: 'World' },
-      'KULTURA': { pl: 'Kultura', en: 'Culture' },
-      'SPORT': { pl: 'Sport', en: 'Sports' },
-      'OPINIE': { pl: 'Opinie', en: 'Opinions' }
+  getCategoryDisplayName(category: Category, currentLanguage: string): string {
+    const categoryMap: { [key in Category]: { pl: string; en: string; de: string; uk: string; ru: string } } = {
+      'ALL': { pl: 'Wszystkie', en: 'All', de: 'Alle', uk: 'Всі', ru: 'Все' },
+      'POLITYKA': { pl: 'Polityka', en: 'Politics', de: 'Politik', uk: 'Політика', ru: 'Политика' },
+      'GOSPODARKA': { pl: 'Gospodarka', en: 'Economy', de: 'Wirtschaft', uk: 'Економіка', ru: 'Экономика' },
+      'SPOŁECZEŃSTWO': { pl: 'Społeczeństwo', en: 'Society', de: 'Gesellschaft', uk: 'Суспільство', ru: 'Общество' },
+      'ŚWIAT': { pl: 'Świat', en: 'World', de: 'Welt', uk: 'Світ', ru: 'Мир' },
+      'KULTURA': { pl: 'Kultura', en: 'Culture', de: 'Kultur', uk: 'Культура', ru: 'Культура' },
+      'SPORT': { pl: 'Sport', en: 'Sports', de: 'Sport', uk: 'Спорт', ru: 'Спорт' },
+      'OPINIE': { pl: 'Opinie', en: 'Opinions', de: 'Meinungen', uk: 'Думки', ru: 'Мнения' }
     };
     
-    return isPolish ? categoryMap[category].pl : categoryMap[category].en;
+    switch (currentLanguage) {
+      case 'pl': return categoryMap[category].pl;
+      case 'en': return categoryMap[category].en;
+      case 'de': return categoryMap[category].de;
+      case 'uk': return categoryMap[category].uk;
+      case 'ru': return categoryMap[category].ru;
+      default: return categoryMap[category].en;
+    }
   }
 }
