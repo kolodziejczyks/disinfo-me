@@ -14,6 +14,12 @@
           <div class="disinformation-warning" *ngIf="getFilteredFeaturedArticle()!.isDisinformation">
             {{ getDisinformationWarning(getFilteredFeaturedArticle()!) }}
           </div>
+          <div class="manipulation-question" *ngIf="getFilteredFeaturedArticle()!.isDisinformation">
+            {{ getManipulationQuestion(getFilteredFeaturedArticle()!) }}
+          </div>
+          <div class="source-info">
+            {{ getSourceInfo(getFilteredFeaturedArticle()!) }}
+          </div>
           <p class="article-excerpt">
             {{ getArticleExcerpt(getFilteredFeaturedArticle()!) }}
           </p>
@@ -38,6 +44,12 @@
             </h3>
             <div class="disinformation-warning" *ngIf="article.isDisinformation">
               {{ getDisinformationWarning(article) }}
+            </div>
+            <div class="manipulation-question" *ngIf="article.isDisinformation">
+              {{ getManipulationQuestion(article) }}
+            </div>
+            <div class="source-info">
+              {{ getSourceInfo(article) }}
             </div>
             <p class="article-excerpt">
               {{ getArticleExcerpt(article) }}
