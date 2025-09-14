@@ -57,6 +57,88 @@ export interface Article {
 })
 export class ArticleService {
   private articles: Article[] = [
+
+  {
+    id: 1,
+    title: "Parlament Europejski przyjmuje Akt o sztucznej inteligencji – pierwsze na świecie kompleksowe prawo AI",
+    titleEn: "European Parliament adopts the AI Act – the world’s first comprehensive AI law",
+    excerpt: "Europosłowie przyjęli Akt o sztucznej inteligencji, ustanawiając podejście oparte na ryzyku, przejrzystości i nadzorze człowieka. Ustawa zakazuje najbardziej szkodliwych zastosowań (np. społeczne punktowanie) i wprowadza rygorystyczne obowiązki dla systemów wysokiego ryzyka oraz wytyczne dla modeli ogólnego przeznaczenia.",
+    excerptEn: "MEPs adopted the AI Act, creating a risk-based framework with transparency and human oversight. The law bans the most harmful uses (e.g., social scoring) and imposes strict obligations on high-risk systems, with tailored rules for general-purpose models.",
+    extendedContent: "Akt o sztucznej inteligencji (AI Act) został przyjęty przez Parlament Europejski jako pierwszy na świecie kompleksowy zestaw zasad regulujących rozwój, wdrażanie i użycie systemów AI. Rdzeniem ustawy jest podejście oparte na ryzyku: im większe ryzyko dla praw podstawowych, zdrowia, bezpieczeństwa lub środowiska, tym surowsze wymagania. Katalog praktyk zabronionych obejmuje m.in. społeczne punktowanie przez władze publiczne oraz niektóre formy zdalnej identyfikacji biometrycznej w czasie rzeczywistym w przestrzeni publicznej, z bardzo wąskimi wyjątkami i gwarancjami.\n\nDla systemów wysokiego ryzyka (np. AI do rekrutacji, edukacji, infrastruktury krytycznej, aplikacji medycznych) przewidziano obowiązki w zakresie jakości danych, dokumentacji technicznej, przejrzystości, solidności, zarządzania ryzykiem i nadzoru człowieka. Producenci będą musieli przeprowadzać oceny zgodności, zapewnić rejestrowalność czynności i umożliwiać audyty. Wprowadzono również wymogi dla modeli ogólnego przeznaczenia (GPAI), w tym dla najbardziej zaawansowanych modeli o potencjale ryzyka systemowego, które muszą spełnić podwyższone standardy bezpieczeństwa, monitoringu i transparentności (np. publikowanie streszczeń użytych danych szkoleniowych).\n\nReżim sankcji jest skalowany do wagi naruszeń i wielkości podmiotu, a maksymalne kary sięgają wysokich wartości procentowych globalnego obrotu lub wielomilionowych kwot w euro. Przepisy wejdą w życie etapowo: praktyki zabronione zaczną obowiązywać szybciej, natomiast większość obowiązków dla systemów wysokiego ryzyka będzie stosowana po dłuższym okresie przejściowym, aby umożliwić firmom i instytucjom przygotowanie się do nowych wymogów. Ustawa kładzie nacisk na innowacje odpowiedzialne, przewidując piaskownice regulacyjne oraz wsparcie dla MŚP i start‑upów.\n\nPrzepisy podkreślają także prawa użytkowników: informowanie o interakcji z AI, oznaczanie treści syntetycznych (np. deepfake), możliwość zgłaszania skarg i dochodzenia roszczeń. Akt ma harmonizować zasady w całej UE, zmniejszając fragmentaryzację rynku i podnosząc standardy ochrony praw podstawowych.",
+    extendedContentEn: "The AI Act was adopted by the European Parliament as the first comprehensive framework governing the development, deployment, and use of AI systems. It is built on a risk-based approach: the greater the potential impact on fundamental rights, health, safety, or the environment, the stricter the obligations. Prohibited practices include, among others, social scoring by public authorities and certain forms of real-time remote biometric identification in public spaces, with tight safeguards and narrow exceptions.\n\nFor high-risk systems (e.g., AI used in recruitment, education, critical infrastructure, medical applications), the Act mandates data quality, technical documentation, transparency, robustness, risk management, and human oversight. Providers must conduct conformity assessments, ensure traceability, and enable audits. General-purpose AI (GPAI) models, including the most capable systems with systemic risk potential, face enhanced safety, monitoring, and transparency requirements (e.g., publishing summaries of training data sources).\n\nEnforcement scales with the severity of violations and company size, with maximum fines reaching significant percentages of global turnover or multimillion-euro amounts. The rules take effect in stages: bans on prohibited practices apply sooner, while most high-risk obligations come later, allowing organizations time to comply. The law supports responsible innovation through regulatory sandboxes and measures to assist SMEs and startups.\n\nUser rights are emphasized: disclosure when interacting with AI, labeling of synthetic content (e.g., deepfakes), and mechanisms to lodge complaints and seek redress. The Act aims to harmonize rules across the EU, reducing market fragmentation and strengthening fundamental rights protections.",
+    disinformationExplanation: "NIE: Artykuł sam w sobie jest rzetelny, ale bywa manipulowany w przestrzeni publicznej. Częste fałszywe tezy to: „AI Act zakazuje open source”, „całkowicie zakazuje rozpoznawania twarzy”, albo „zabije innowacje w UE”. W rzeczywistości ustawa nie zakazuje otwartego oprogramowania, tylko nakłada obowiązki zależne od kontekstu i ryzyka; biometryka jest mocno ograniczona, lecz nie absolutnie zakazana; przepisy przewidują piaskownice i wsparcie dla innowacji.",
+    disinformationExplanationEn: "NO: The article is accurate, but public discourse often distorts it. Common false claims include: “The AI Act bans open source,” “It completely bans facial recognition,” or “It will kill EU innovation.” In reality, obligations are risk- and context-based; biometrics are tightly restricted but not outright banned; and the law provides sandboxes and support for innovation.",
+    manipulationQuestion: "CZY ZNALAZŁEŚ MANIPULACJĘ?",
+    manipulationQuestionEn: "DID YOU FIND THE MANIPULATION?",
+    manipulationAnswer: "NIE. Jednak uważaj na uproszczenia i memy, które wyrywają przepisy z kontekstu (np. o „zakazie open source”).",
+    manipulationAnswerEn: "NO. But watch for oversimplified takes and memes that strip the rules of context (e.g., alleged “open source ban”).",
+    sourceUrl: "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-meps-adopt-landmark-law",
+    sourceName: "European Parliament",
+    originalTitle: "Artificial intelligence act: MEPs adopt landmark law",
+    author: "European Parliament Press Service",
+    date: "13 marca 2024",
+    category: "PRAWO",
+    categoryEn: "LAW",
+    imageUrl: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=1200&h=800&fit=crop",
+    readTime: "7 min",
+    isDisinformation: false,
+    disinformationWarning: "",
+    disinformationWarningEn: ""
+  },
+  {
+    id: 2,
+    title: "Apple ogłasza Apple Intelligence: funkcje AI na urządzeniach i w chmurze prywatnej",
+    titleEn: "Apple announces Apple Intelligence: on‑device AI with Private Cloud Compute",
+    excerpt: "Apple zaprezentowało Apple Intelligence dla iOS 18, iPadOS 18 i macOS Sequoia. Nowe funkcje obejmują narzędzia do pisania, generowanie obrazów, kontekstowe działania i znacznie ulepszoną Siri. Obliczenia odbywają się na urządzeniu lub w zweryfikowanej chmurze prywatnej, z naciskiem na ochronę prywatności.",
+    excerptEn: "Apple introduced Apple Intelligence for iOS 18, iPadOS 18, and macOS Sequoia. It brings writing tools, image generation, context-aware actions, and a much-improved Siri. Processing runs on-device or via verified Private Cloud Compute, with strong privacy guarantees.",
+    extendedContent: "Apple Intelligence to zestaw funkcji AI głęboko zintegrowanych z systemami iOS 18, iPadOS 18 i macOS Sequoia. Apple kładzie nacisk na prywatność: w pierwszej kolejności zadania są wykonywane na urządzeniu (A17 Pro lub układy z rodziny M), a gdy wymagana jest większa moc, przetwarzanie przenosi się do tzw. Private Cloud Compute – serwerów Apple zbudowanych na zabezpieczonych podzespołach i z publicznie weryfikowalnym oprogramowaniem. Firma deklaruje, że żadne dane użytkownika nie są przechowywane ani dostępne dla osób trzecich poza zakresem zadania i że niezależni badacze mogą weryfikować obrazy systemu.\n\nFunkcje obejmują: narzędzia do pisania (podsumowania, redakcję, zmianę tonu) w aplikacjach systemowych i zgodnych aplikacjach firm trzecich; generowanie obrazów i emoji (Genmoji) oraz szybkie szkice w Notatkach; działania kontekstowe oparte o świadomość treści na ekranie (np. automatyczne tworzenie przypomnień na podstawie wiadomości) i obsługę złożonych poleceń wieloetapowych. Siri otrzymuje nowe możliwości zrozumienia kontekstu, pamięci konwersacyjnej i integracji z aplikacjami.\n\nApple zapowiedziało też integrację z ChatGPT od OpenAI dla wybranych zapytań, przy czym użytkownik musi wyraźnie wyrazić zgodę przed przekazaniem danych do dostawcy zewnętrznego. Funkcje będą początkowo dostępne w języku angielskim i na ograniczonej liście urządzeń (nowsze iPhone’y oraz komputery iPad/Mac z chipami M), z planami rozszerzeń w kolejnych aktualizacjach. W materiałach dla deweloperów firma podkreśliła nowe interfejsy API i możliwość tworzenia rozszerzeń, które korzystają z kontekstu urządzenia przy zachowaniu zasad minimalizacji danych.",
+    extendedContentEn: "Apple Intelligence is a suite of AI features deeply integrated into iOS 18, iPadOS 18, and macOS Sequoia. Privacy is central: tasks run on-device first (A17 Pro or M‑series chips), and when more compute is needed they shift to Private Cloud Compute—Apple-run servers with secure hardware and publicly verifiable software images. Apple states that no user data is retained or made accessible beyond the specific request, and independent researchers can verify the images.\n\nFeatures include system-wide writing tools (summarization, rewriting, tone adjustments) across system apps and compatible third-party apps; image and Genmoji creation, quick sketching in Notes; and context-aware actions that understand what’s on screen to automate multi-step tasks. Siri gains stronger contextual understanding, conversational memory, and deeper app integration.\n\nApple also announced optional integration with OpenAI’s ChatGPT for certain queries, with explicit user consent required before any data is shared externally. The features launch first in English and on a limited set of devices (newer iPhones and iPad/Mac with M‑series chips), with broader rollout planned. Developer materials highlight new APIs and extensions that leverage on-device context while adhering to data minimization principles.",
+    disinformationExplanation: "NIE: Opis odpowiada oficjalnym materiałom Apple. Potencjalne manipulacje to twierdzenia, że „Apple wysyła wszystkie zdjęcia i wiadomości do OpenAI” lub że „Siri całkowicie zastąpił ChatGPT”. W rzeczywistości integracja z ChatGPT jest opcjonalna i wymaga zgody, a obliczenia domyślnie odbywają się na urządzeniu lub w prywatnej chmurze Apple z ograniczeniami dostępu.",
+    disinformationExplanationEn: "NO: This reflects Apple’s official materials. Likely manipulations include claims that “Apple uploads all photos and messages to OpenAI” or that “Siri is now entirely ChatGPT.” In reality, ChatGPT integration is optional and consent-based, and processing defaults to on-device or Apple’s restricted Private Cloud Compute.",
+    manipulationQuestion: "CZY ZNALAZŁEŚ MANIPULACJĘ?",
+    manipulationQuestionEn: "DID YOU FIND THE MANIPULATION?",
+    manipulationAnswer: "NIE. Pojawiające się uproszczenia zwykle ignorują fakt, że integracja jest opcjonalna i kontrolowana zgodami.",
+    manipulationAnswerEn: "NO. Oversimplified takes often ignore that integration is optional and consent-gated.",
+    sourceUrl: "https://www.apple.com/newsroom/2024/06/introducing-apple-intelligence-for-iphone-ipad-and-mac/",
+    sourceName: "Apple Newsroom",
+    originalTitle: "Introducing Apple Intelligence for iPhone, iPad, and Mac",
+    author: "Apple",
+    date: "10 czerwca 2024",
+    category: "TECHNOLOGIA",
+    categoryEn: "TECHNOLOGY",
+    imageUrl: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&h=800&fit=crop",
+    readTime: "6 min",
+    isDisinformation: false,
+    disinformationWarning: "",
+    disinformationWarningEn: ""
+  },
+  {
+    id: 3,
+    title: "OpenAI prezentuje GPT‑4o: model „omni” obsługujący tekst, obraz i głos w czasie rzeczywistym",
+    titleEn: "OpenAI introduces GPT‑4o: an “omni” model for real‑time text, vision, and voice",
+    excerpt: "OpenAI ogłosiło GPT‑4o – wielomodalny model zdolny do natywnej obsługi tekstu, obrazu i mowy z niskimi opóźnieniami. Aktualizacja przynosi bardziej naturalne rozmowy głosowe, lepsze rozumienie obrazu i ogólnie większą wydajność przy niższych kosztach.",
+    excerptEn: "OpenAI announced GPT‑4o, a multimodal model that natively handles text, images, and speech with low latency. It enables more natural voice interactions, stronger vision capabilities, and improved efficiency at lower cost.",
+    extendedContent: "GPT‑4o (od „omni”) to wielomodalna ewolucja modeli GPT, która przetwarza i generuje tekst, obraz oraz mowę end‑to‑end. OpenAI podkreśla znacząco obniżone opóźnienia i bardziej naturalną interakcję głosową – użytkownik może rozmawiać z modelem, który w czasie zbliżonym do rzeczywistego interpretuje kontekst, ton i elementy wizualne. W zakresie obrazu wprowadzono dokładniejsze rozpoznawanie i analizę, co ułatwia np. pomoc w zadaniach technicznych, odczytywanie wykresów czy wyjaśnianie zawartości ekranu.\n\nNowy model ma lepszy stosunek jakości do kosztu, co ma ułatwić wdrażanie aplikacji opartych na AI szerokiemu gronu twórców. OpenAI zwraca uwagę na warstwę bezpieczeństwa: filtry treści, mechanizmy redukcji nadużyć i zasady ograniczające użycie w scenariuszach ryzykownych. Firma deklaruje, że funkcje głosowe i wizualne są projektowane z myślą o ochronie prywatności i respektowaniu praw autorskich, w tym poprzez wyraźne oznaczanie generowanych treści i możliwość ich odróżniania od materiałów autentycznych.\n\nAktualizacji towarzyszą udoskonalenia w ChatGPT, w tym szersza dostępność funkcji multimodalnych dla użytkowników bezpłatnych i płatnych, oraz nowe narzędzia dla deweloperów do budowy aplikacji czasu rzeczywistego. OpenAI podkreśla zastosowania edukacyjne, asystenckie i kreatywne, jednocześnie przypominając o odpowiedzialnym projektowaniu i testowaniu rozwiązań opartych na GPT‑4o.",
+    extendedContentEn: "GPT‑4o (“omni”) is a multimodal evolution of GPT models that processes and generates text, images, and speech end‑to‑end. OpenAI highlights substantially lower latency and more natural voice interactions—the model can converse in near real time, interpreting context, tone, and visual elements. Vision improves accuracy and analysis, aiding tasks like technical troubleshooting, chart reading, and explaining on‑screen content.\n\nThe model targets better quality‑to‑cost ratios, making real‑time AI applications more accessible to developers. OpenAI emphasizes safety layers—content filters, abuse mitigation, and guardrails to restrict risky uses. Voice and vision features are designed with privacy and IP considerations in mind, including clear labeling of generated content and mechanisms to distinguish it from authentic media.\n\nChatGPT gains broader multimodal availability across free and paid tiers, and developers receive tools to build low‑latency experiences. OpenAI points to education, assistance, and creative workflows as key use cases, while stressing responsible design and testing with GPT‑4o.",
+    disinformationExplanation: "NIE: Ogłoszenie jest zgodne z wpisem na blogu OpenAI. Typowe nadużycia narracyjne to: „GPT‑4o to już AGI”, „model słucha cię cały czas” lub „może widzieć przez kamerę bez twojej zgody”. W rzeczywistości chodzi o multimodalność i niskie opóźnienia w zadaniach, a dostęp do mikrofonu/kamery wymaga zgody aplikacji i użytkownika.",
+    disinformationExplanationEn: "NO: This aligns with OpenAI’s blog. Common distortions include: “GPT‑4o is AGI,” “it’s always listening,” or “it can access your camera without consent.” In reality, the focus is multimodality and low latency, and mic/camera access requires app and user permissions.",
+    manipulationQuestion: "CZY ZNALAZŁEŚ MANIPULACJĘ?",
+    manipulationQuestionEn: "DID YOU FIND THE MANIPULATION?",
+    manipulationAnswer: "NIE. Pamiętaj jednak, by odróżniać demonstracje produktowe od ogólnych możliwości w każdej aplikacji.",
+    manipulationAnswerEn: "NO. Still, distinguish staged demos from what any given app actually enables.",
+    sourceUrl: "https://openai.com/index/hello-gpt-4o",
+    sourceName: "OpenAI",
+    originalTitle: "Hello GPT-4o",
+    author: "OpenAI",
+    date: "13 maja 2024",
+    category: "TECHNOLOGIA",
+    categoryEn: "TECHNOLOGY",
+    imageUrl: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1200&h=800&fit=crop",
+    readTime: "5 min",
+    isDisinformation: false,
+    disinformationWarning: "",
+    disinformationWarningEn: ""
+  },
     // POLITYKA - POLITICS
     {
       id: 1,
@@ -655,8 +737,8 @@ export class ArticleService {
     // Return a mix of articles from different categories for the main page
     const mixedArticles = [
       this.articles[0], // POLITYKA
-      this.articles[3], // GOSPODARKA  
-      this.articles[6], // SPOŁECZEŃSTWO
+      this.articles[1], // GOSPODARKA  
+      this.articles[2], // SPOŁECZEŃSTWO
       this.articles[9], // ŚWIAT
       this.articles[12], // KULTURA
       this.articles[15], // SPORT
