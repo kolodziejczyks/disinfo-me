@@ -140,23 +140,6 @@ export class ArticleDetailComponent implements OnInit {
     return 'Details';
   }
 
-  getWhyDisinformationText(): string {
-    if (this.isPolish()) return 'Dlaczego to dezinformacja?';
-    if (this.isEnglish()) return 'Why is this disinformation?';
-    if (this.isGerman()) return 'Warum ist das Desinformation?';
-    if (this.isUkrainian()) return 'Чому це дезінформація?';
-    if (this.isRussian()) return 'Почему это дезинформация?';
-    return 'Why is this disinformation?';
-  }
-
-  getHowToVerifyText(): string {
-    if (this.isPolish()) return 'Jak weryfikować informacje?';
-    if (this.isEnglish()) return 'How to verify information?';
-    if (this.isGerman()) return 'Wie überprüft man Informationen?';
-    if (this.isUkrainian()) return 'Як перевіряти інформацію?';
-    if (this.isRussian()) return 'Как проверять информацию?';
-    return 'How to verify information?';
-  }
 
   getRelatedArticlesText(): string {
     if (this.isPolish()) return 'Powiązane artykuły';

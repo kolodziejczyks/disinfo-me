@@ -11,9 +11,6 @@
     <header class="article-header">
       <div class="article-category">{{ getArticleCategory(article) }}</div>
       <h1 class="article-title">{{ getArticleTitle(article) }}</h1>
-      <div class="disinformation-warning-large" *ngIf="article.isDisinformation">
-        {{ getDisinformationWarning(article) }}
-      </div>
       <div class="source-info-large">
         {{ getSourceInfo(article) }}
       </div>
@@ -45,25 +42,6 @@
           {{ getExtendedContentEn(article) }}
         </p>
 
-        <h3>{{ getWhyDisinformationText() }}</h3>
-        <p *ngIf="isPolish()">
-          {{ getDisinformationExplanation(article) }}
-        </p>
-        <p *ngIf="!isPolish()">
-          {{ getDisinformationExplanationEn(article) }}
-        </p>
-
-        <h3>{{ getHowToVerifyText() }}</h3>
-        <ul>
-          <li *ngIf="isPolish()">Sprawdź źródło informacji w wiarygodnych mediach</li>
-          <li *ngIf="isPolish()">Zweryfikuj dane w oficjalnych dokumentach</li>
-          <li *ngIf="isPolish()">Sprawdź, czy inne media donoszą o tym samym</li>
-          <li *ngIf="isPolish()">Użyj narzędzi fact-checkingowych</li>
-          <li *ngIf="!isPolish()">Check the source in reliable media</li>
-          <li *ngIf="!isPolish()">Verify data in official documents</li>
-          <li *ngIf="!isPolish()">Check if other media report the same</li>
-          <li *ngIf="!isPolish()">Use fact-checking tools</li>
-        </ul>
 
       </div>
     </div>
@@ -81,9 +59,6 @@
             <h4 class="related-title">
               <a (click)="goToArticle(relatedArticle.id)">{{ getArticleTitle(relatedArticle) }}</a>
             </h4>
-            <div class="disinformation-warning-small" *ngIf="relatedArticle.isDisinformation">
-              {{ getDisinformationWarning(relatedArticle) }}
-            </div>
             <p class="related-excerpt">{{ getArticleExcerpt(relatedArticle) }}</p>
             <div class="related-meta">
               <span class="author">{{ relatedArticle.author }}</span>
