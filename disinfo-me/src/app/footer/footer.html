@@ -9,21 +9,21 @@
       <div class="footer-section">
         <h4>{{ isPolish() ? 'Kategorie' : 'Categories' }}</h4>
         <ul>
-          <li><a href="#">{{ isPolish() ? 'Polityka' : 'Politics' }}</a></li>
-          <li><a href="#">{{ isPolish() ? 'Gospodarka' : 'Economy' }}</a></li>
-          <li><a href="#">{{ isPolish() ? 'Społeczeństwo' : 'Society' }}</a></li>
-          <li><a href="#">{{ isPolish() ? 'Technologia' : 'Technology' }}</a></li>
-          <li><a href="#">{{ isPolish() ? 'Edukacja' : 'Education' }}</a></li>
+          <li><span>{{ isPolish() ? 'Polityka' : 'Politics' }}</span></li>
+          <li><span>{{ isPolish() ? 'Gospodarka' : 'Economy' }}</span></li>
+          <li><span>{{ isPolish() ? 'Społeczeństwo' : 'Society' }}</span></li>
+          <li><span>{{ isPolish() ? 'Technologia' : 'Technology' }}</span></li>
+          <li><span>{{ isPolish() ? 'Edukacja' : 'Education' }}</span></li>
         </ul>
       </div>
       
       <div class="footer-section">
         <h4>{{ isPolish() ? 'Narzędzia' : 'Tools' }}</h4>
         <ul>
-          <li><a href="#">Fact-checking</a></li>
-          <li><a href="#">{{ isPolish() ? 'Weryfikacja źródeł' : 'Source verification' }}</a></li>
-          <li><a href="#">{{ isPolish() ? 'Przewodnik dla mediów' : 'Media guide' }}</a></li>
-          <li><a href="#">{{ isPolish() ? 'Materiały edukacyjne' : 'Educational materials' }}</a></li>
+          <li><span>Fact-checking</span></li>
+          <li><span>{{ isPolish() ? 'Weryfikacja źródeł' : 'Source verification' }}</span></li>
+          <li><span>{{ isPolish() ? 'Przewodnik dla mediów' : 'Media guide' }}</span></li>
+          <li><span>{{ isPolish() ? 'Materiały edukacyjne' : 'Educational materials' }}</span></li>
         </ul>
       </div>
       
@@ -32,15 +32,15 @@
         <p>Email: kontakt@disinfo-me.pl</p>
         <p>{{ isPolish() ? 'Telefon' : 'Phone' }}: +48 123 456 789</p>
         <div class="social-links">
-          <a href="#" aria-label="Facebook">📘</a>
-          <a href="#" aria-label="Twitter">🐦</a>
-          <a href="#" aria-label="LinkedIn">💼</a>
+          <span aria-label="Facebook">📘</span>
+          <span aria-label="Twitter">🐦</span>
+          <span aria-label="LinkedIn">💼</span>
         </div>
       </div>
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; 2024 Disinfo Me. {{ isPolish() ? 'Wszystkie prawa zastrzeżone.' : 'All rights reserved.' }} | <a href="#">{{ isPolish() ? 'Polityka prywatności' : 'Privacy Policy' }}</a> | <a href="#">{{ isPolish() ? 'Regulamin' : 'Terms' }}</a></p>
+      <p>&copy; 2024 Disinfo Me. {{ isPolish() ? 'Wszystkie prawa zastrzeżone.' : 'All rights reserved.' }} | <span>{{ isPolish() ? 'Polityka prywatności' : 'Privacy Policy' }}</span> | <span>{{ isPolish() ? 'Regulamin' : 'Terms' }}</span></p>
     </div>
   </div>
 </footer>

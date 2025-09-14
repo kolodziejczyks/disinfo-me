@@ -23,6 +23,19 @@
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.featured-article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.featured-article:active {
+  transform: translateY(0);
 }
 
 .article-image {
@@ -356,11 +369,17 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .article-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.article-card:active {
+  transform: translateY(0);
 }
 
 .article-card .article-image {
@@ -564,5 +583,32 @@
   
   .secondary-articles {
     gap: 15px;
+  }
+  
+  /* Mobile touch improvements */
+  .featured-article,
+  .article-card {
+    min-height: 44px; /* Minimum touch target size */
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    touch-action: manipulation;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .featured-article:active,
+  .article-card:active {
+    background-color: #f5f5f5;
+    transform: scale(0.98);
+  }
+  
+  /* Ensure all child elements don't interfere with clicks */
+  .featured-article *,
+  .article-card * {
+    pointer-events: none;
+  }
+  
+  .featured-article,
+  .article-card {
+    pointer-events: auto;
   }
 }

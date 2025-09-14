@@ -39,8 +39,8 @@
                      RU
                    </button>
                  </div>
-          <a href="#" class="subscribe-btn">{{ getSubscribeText() }}</a>
-          <a href="#" class="login-btn">{{ getLoginText() }}</a>
+          <button class="subscribe-btn">{{ getSubscribeText() }}</button>
+          <button class="login-btn">{{ getLoginText() }}</button>
         </div>
       </div>
     </div>
@@ -56,46 +56,54 @@
         
                <nav class="main-nav">
                  <ul>
-                   <li><a href="#" 
+                   <li><span 
                           [class.active]="isCategoryActive('ALL')" 
-                          (click)="selectCategory('ALL'); $event.preventDefault()">
+                          (click)="selectCategory('ALL')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('ALL') }}
-                   </a></li>
-                   <li><a href="#" 
+                   </span></li>
+                   <li><span 
                           [class.active]="isCategoryActive('POLITYKA')" 
-                          (click)="selectCategory('POLITYKA'); $event.preventDefault()">
+                          (click)="selectCategory('POLITYKA')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('POLITYKA') }}
-                   </a></li>
-                   <li><a href="#" 
+                   </span></li>
+                   <li><span 
                           [class.active]="isCategoryActive('GOSPODARKA')" 
-                          (click)="selectCategory('GOSPODARKA'); $event.preventDefault()">
+                          (click)="selectCategory('GOSPODARKA')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('GOSPODARKA') }}
-                   </a></li>
-                   <li><a href="#" 
+                   </span></li>
+                   <li><span 
                           [class.active]="isCategoryActive('SPOŁECZEŃSTWO')" 
-                          (click)="selectCategory('SPOŁECZEŃSTWO'); $event.preventDefault()">
+                          (click)="selectCategory('SPOŁECZEŃSTWO')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('SPOŁECZEŃSTWO') }}
-                   </a></li>
-                   <li><a href="#" 
+                   </span></li>
+                   <li><span 
                           [class.active]="isCategoryActive('ŚWIAT')" 
-                          (click)="selectCategory('ŚWIAT'); $event.preventDefault()">
+                          (click)="selectCategory('ŚWIAT')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('ŚWIAT') }}
-                   </a></li>
-                   <li><a href="#" 
+                   </span></li>
+                   <li><span 
                           [class.active]="isCategoryActive('KULTURA')" 
-                          (click)="selectCategory('KULTURA'); $event.preventDefault()">
+                          (click)="selectCategory('KULTURA')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('KULTURA') }}
-                   </a></li>
-                   <li><a href="#" 
+                   </span></li>
+                   <li><span 
                           [class.active]="isCategoryActive('SPORT')" 
-                          (click)="selectCategory('SPORT'); $event.preventDefault()">
+                          (click)="selectCategory('SPORT')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('SPORT') }}
-                   </a></li>
-                   <li><a href="#" 
+                   </span></li>
+                   <li><span 
                           [class.active]="isCategoryActive('OPINIE')" 
-                          (click)="selectCategory('OPINIE'); $event.preventDefault()">
+                          (click)="selectCategory('OPINIE')"
+                          class="nav-link">
                         {{ getCategoryDisplayName('OPINIE') }}
-                   </a></li>
+                   </span></li>
                  </ul>
                </nav>
         

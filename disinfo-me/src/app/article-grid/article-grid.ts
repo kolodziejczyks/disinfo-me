@@ -159,6 +159,7 @@ export class ArticleGridComponent {
   }
 
   goToArticle(articleId: number) {
+    console.log('Navigating to article:', articleId);
     this.router.navigate(['/article', articleId]);
   }
 

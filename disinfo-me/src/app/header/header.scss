@@ -113,7 +113,8 @@
   gap: 25px;
 }
 
-.main-nav a {
+.main-nav a,
+.main-nav .nav-link {
   color: #333;
   text-decoration: none;
   font-weight: 500;
@@ -121,10 +122,14 @@
   padding: 8px 0;
   border-bottom: 2px solid transparent;
   transition: all 0.2s;
+  cursor: pointer;
+  display: block;
 }
 
 .main-nav a:hover,
-.main-nav a.active {
+.main-nav a.active,
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
   color: #d32f2f;
   border-bottom-color: #d32f2f;
 }
