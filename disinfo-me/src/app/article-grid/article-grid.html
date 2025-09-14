@@ -2,14 +2,14 @@
   <div class="container">
     <div class="grid-layout">
       <!-- Main featured article -->
-      <article class="featured-article" *ngIf="getFilteredFeaturedArticle()">
+      <article class="featured-article" *ngIf="getFilteredFeaturedArticle()" (click)="goToArticle(getFilteredFeaturedArticle()!.id)">
         <div class="article-image">
           <img [src]="getFilteredFeaturedArticle()!.imageUrl" [alt]="getArticleTitle(getFilteredFeaturedArticle()!)">
           <div class="article-category">{{ getArticleCategory(getFilteredFeaturedArticle()!) }}</div>
         </div>
         <div class="article-content">
           <h2 class="article-title">
-            <a href="#">{{ getArticleTitle(getFilteredFeaturedArticle()!) }}</a>
+            <a href="#" (click)="$event.preventDefault()">{{ getArticleTitle(getFilteredFeaturedArticle()!) }}</a>
           </h2>
           <div class="disinformation-warning" *ngIf="getFilteredFeaturedArticle()!.isDisinformation">
             {{ getDisinformationWarning(getFilteredFeaturedArticle()!) }}
@@ -27,14 +27,14 @@
 
       <!-- Secondary articles -->
       <div class="secondary-articles">
-        <article class="article-card" *ngFor="let article of getFilteredSecondaryArticles()">
+        <article class="article-card" *ngFor="let article of getFilteredSecondaryArticles()" (click)="goToArticle(article.id)">
           <div class="article-image">
             <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
             <div class="article-category">{{ getArticleCategory(article) }}</div>
           </div>
           <div class="article-content">
             <h3 class="article-title">
-              <a href="#">{{ getArticleTitle(article) }}</a>
+              <a href="#" (click)="$event.preventDefault()">{{ getArticleTitle(article) }}</a>
             </h3>
             <div class="disinformation-warning" *ngIf="article.isDisinformation">
               {{ getDisinformationWarning(article) }}
@@ -55,14 +55,14 @@
         <div class="category-section" *ngFor="let category of getCategories()" [id]="'category-' + category.toLowerCase()">
           <h3 class="category-title">{{ getCategoryTitle(category) }}</h3>
           <div class="category-articles">
-            <article class="category-article" *ngFor="let article of getArticlesByCategory(category).slice(0, 3)">
+            <article class="category-article" *ngFor="let article of getArticlesByCategory(category).slice(0, 3)" (click)="goToArticle(article.id)">
               <div class="category-article-image">
                 <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
                 <div class="article-category-small">{{ getArticleCategory(article) }}</div>
               </div>
               <div class="category-article-content">
                 <h4 class="category-article-title">
-                  <a href="#">{{ getArticleTitle(article) }}</a>
+                  <a href="#" (click)="$event.preventDefault()">{{ getArticleTitle(article) }}</a>
                 </h4>
                 <div class="disinformation-warning-small" *ngIf="article.isDisinformation">
                   {{ getDisinformationWarning(article) }}
@@ -80,14 +80,14 @@
       <!-- Filtered articles view (when specific category is selected) -->
       <div class="filtered-articles" *ngIf="shouldShowFilteredArticles()">
         <div class="filtered-articles-grid">
-          <article class="filtered-article" *ngFor="let article of getFilteredArticles()">
+          <article class="filtered-article" *ngFor="let article of getFilteredArticles()" (click)="goToArticle(article.id)">
             <div class="filtered-article-image">
               <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
               <div class="article-category-small">{{ getArticleCategory(article) }}</div>
             </div>
             <div class="filtered-article-content">
               <h3 class="filtered-article-title">
-                <a href="#">{{ getArticleTitle(article) }}</a>
+                <a href="#" (click)="$event.preventDefault()">{{ getArticleTitle(article) }}</a>
               </h3>
               <div class="disinformation-warning" *ngIf="article.isDisinformation">
                 {{ getDisinformationWarning(article) }}

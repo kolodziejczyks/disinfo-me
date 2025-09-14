@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { ArticleService, Article } from '../services/article';
 import { LanguageService } from '../services/language';
 import { CategoryFilterService, Category } from '../services/category-filter';
@@ -14,6 +15,7 @@ export class ArticleGridComponent {
   private articleService = inject(ArticleService);
   private languageService = inject(LanguageService);
   private categoryFilterService = inject(CategoryFilterService);
+  private router = inject(Router);
 
   getFeaturedArticle(): Article {
     return this.articleService.getFeaturedArticle();
@@ -105,5 +107,9 @@ export class ArticleGridComponent {
 
   shouldShowFilteredArticles(): boolean {
     return this.getCurrentCategory() !== 'ALL';
+  }
+
+  goToArticle(articleId: number) {
+    this.router.navigate(['/article', articleId]);
   }
 }

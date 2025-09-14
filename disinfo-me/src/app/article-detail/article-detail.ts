@@ -56,4 +56,20 @@ export class ArticleDetailComponent implements OnInit {
   goToArticle(articleId: number) {
     this.router.navigate(['/article', articleId]);
   }
+
+  getExtendedContent(article: Article): string {
+    return article.extendedContent || article.excerpt;
+  }
+
+  getExtendedContentEn(article: Article): string {
+    return article.extendedContentEn || article.excerptEn;
+  }
+
+  getDisinformationExplanation(article: Article): string {
+    return article.disinformationExplanation || 'To jest dezinformacja, która nie ma żadnych podstaw naukowych ani faktów.';
+  }
+
+  getDisinformationExplanationEn(article: Article): string {
+    return article.disinformationExplanationEn || 'This is disinformation that has no scientific basis or facts.';
+  }
 }

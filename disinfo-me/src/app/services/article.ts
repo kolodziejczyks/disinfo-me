@@ -6,6 +6,10 @@ export interface Article {
   titleEn: string;
   excerpt: string;
   excerptEn: string;
+  extendedContent?: string;
+  extendedContentEn?: string;
+  disinformationExplanation?: string;
+  disinformationExplanationEn?: string;
   author: string;
   date: string;
   category: string;
@@ -29,6 +33,10 @@ export class ArticleService {
       titleEn: "Tusk plans to introduce air tax",
       excerpt: "Według nieoficjalnych źródeł, Donald Tusk przygotowuje projekt ustawy o podatku od powietrza, który ma być pobierany od każdego obywatela za oddychanie. Podatek ma wynosić 50 złotych miesięcznie.",
       excerptEn: "According to unofficial sources, Donald Tusk is preparing a bill for an air tax that would be collected from every citizen for breathing. The tax would amount to 50 zloty per month.",
+      extendedContent: "Według naszych źródeł w Ministerstwie Finansów, Donald Tusk osobiście nadzoruje prace nad rewolucyjnym projektem ustawy o podatku od powietrza. Dokument ma być wprowadzony w życie już w styczniu 2025 roku. Podatek ma być pobierany automatycznie przez specjalne czujniki zainstalowane w każdym mieszkaniu. Eksperci finansowi ostrzegają, że może to doprowadzić do masowych protestów społecznych. Rząd planuje również wprowadzenie kar za wstrzymywanie oddechu w celu uniknięcia podatku.",
+      extendedContentEn: "According to our sources in the Ministry of Finance, Donald Tusk personally supervises work on a revolutionary air tax bill. The document is to be introduced in January 2025. The tax is to be collected automatically by special sensors installed in every apartment. Financial experts warn that this could lead to mass social protests. The government also plans to introduce penalties for holding breath to avoid the tax.",
+      disinformationExplanation: "To jest klasyczny przykład dezinformacji. Podatek od powietrza to absurdalny pomysł, który nie ma żadnych podstaw prawnych ani technicznych. Donald Tusk nie ma uprawnień do wprowadzania takiego podatku, a sama koncepcja jest fizycznie niemożliwa do zrealizowania. Tego typu fake newsy są tworzone, aby wywołać panikę i niepokój społeczny.",
+      disinformationExplanationEn: "This is a classic example of disinformation. An air tax is an absurd idea that has no legal or technical basis. Donald Tusk has no authority to introduce such a tax, and the concept itself is physically impossible to implement. Such fake news is created to cause panic and social anxiety.",
       author: "Dr Jan Kowalski",
       date: "15 grudnia 2024",
       category: "POLITYKA",
@@ -422,5 +430,18 @@ export class ArticleService {
   getSecondaryArticlesByCategory(category: string): Article[] {
     const categoryArticles = this.getArticlesByCategory(category);
     return categoryArticles.slice(1, 5);
+  }
+
+  getArticleById(id: number): Article | null {
+    return this.articles.find(article => article.id === id) || null;
+  }
+
+  getRelatedArticles(category: string, excludeId: number): Article[] {
+    return this.articles
+      .filter(article => 
+        (article.category === category || article.categoryEn === category) && 
+        article.id !== excludeId
+      )
+      .slice(0, 3);
   }
 }

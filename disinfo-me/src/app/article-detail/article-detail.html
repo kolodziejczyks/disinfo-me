@@ -1,0 +1,103 @@
+<div class="article-detail" *ngIf="article">
+  <div class="container">
+    <!-- Back button -->
+    <div class="back-button">
+      <button (click)="goBack()" class="btn-back">
+        ← {{ isPolish() ? 'Powrót do strony głównej' : 'Back to main page' }}
+      </button>
+    </div>
+
+    <!-- Article header -->
+    <header class="article-header">
+      <div class="article-category">{{ getArticleCategory(article) }}</div>
+      <h1 class="article-title">{{ getArticleTitle(article) }}</h1>
+      <div class="disinformation-warning-large" *ngIf="article.isDisinformation">
+        {{ getDisinformationWarning(article) }}
+      </div>
+      <div class="article-meta">
+        <span class="author">{{ article.author }}</span>
+        <span class="date">{{ article.date }}</span>
+        <span class="read-time">{{ article.readTime }} {{ isPolish() ? 'czytania' : 'read' }}</span>
+      </div>
+    </header>
+
+    <!-- Article image -->
+    <div class="article-image">
+      <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
+    </div>
+
+    <!-- Article content -->
+    <div class="article-content">
+      <div class="article-excerpt">
+        <p>{{ getArticleExcerpt(article) }}</p>
+      </div>
+
+      <!-- Extended content -->
+      <div class="article-body">
+        <h2>{{ isPolish() ? 'Szczegóły' : 'Details' }}</h2>
+        <p *ngIf="isPolish()">
+          {{ getExtendedContent(article) }}
+        </p>
+        <p *ngIf="!isPolish()">
+          {{ getExtendedContentEn(article) }}
+        </p>
+
+        <h3>{{ isPolish() ? 'Dlaczego to dezinformacja?' : 'Why is this disinformation?' }}</h3>
+        <p *ngIf="isPolish()">
+          {{ getDisinformationExplanation(article) }}
+        </p>
+        <p *ngIf="!isPolish()">
+          {{ getDisinformationExplanationEn(article) }}
+        </p>
+
+        <h3>{{ isPolish() ? 'Jak weryfikować informacje?' : 'How to verify information?' }}</h3>
+        <ul>
+          <li *ngIf="isPolish()">Sprawdź źródło informacji w wiarygodnych mediach</li>
+          <li *ngIf="isPolish()">Zweryfikuj dane w oficjalnych dokumentach</li>
+          <li *ngIf="isPolish()">Sprawdź, czy inne media donoszą o tym samym</li>
+          <li *ngIf="isPolish()">Użyj narzędzi fact-checkingowych</li>
+          <li *ngIf="!isPolish()">Check the source in reliable media</li>
+          <li *ngIf="!isPolish()">Verify data in official documents</li>
+          <li *ngIf="!isPolish()">Check if other media report the same</li>
+          <li *ngIf="!isPolish()">Use fact-checking tools</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Related articles -->
+    <aside class="related-articles" *ngIf="relatedArticles.length > 0">
+      <h3>{{ isPolish() ? 'Powiązane artykuły' : 'Related articles' }}</h3>
+      <div class="related-grid">
+        <article class="related-article" *ngFor="let relatedArticle of relatedArticles">
+          <div class="related-image">
+            <img [src]="relatedArticle.imageUrl" [alt]="getArticleTitle(relatedArticle)">
+            <div class="article-category-small">{{ getArticleCategory(relatedArticle) }}</div>
+          </div>
+          <div class="related-content">
+            <h4 class="related-title">
+              <a (click)="goToArticle(relatedArticle.id)">{{ getArticleTitle(relatedArticle) }}</a>
+            </h4>
+            <div class="disinformation-warning-small" *ngIf="relatedArticle.isDisinformation">
+              {{ getDisinformationWarning(relatedArticle) }}
+            </div>
+            <p class="related-excerpt">{{ getArticleExcerpt(relatedArticle) }}</p>
+            <div class="related-meta">
+              <span class="author">{{ relatedArticle.author }}</span>
+              <span class="date">{{ relatedArticle.date }}</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="article-not-found" *ngIf="!article">
+  <div class="container">
+    <h1>{{ isPolish() ? 'Artykuł nie został znaleziony' : 'Article not found' }}</h1>
+    <p>{{ isPolish() ? 'Przepraszamy, ale artykuł o podanym ID nie istnieje.' : 'Sorry, but the article with the given ID does not exist.' }}</p>
+    <button (click)="goBack()" class="btn-back">
+      {{ isPolish() ? 'Powrót do strony głównej' : 'Back to main page' }}
+    </button>
+  </div>
+</div>
