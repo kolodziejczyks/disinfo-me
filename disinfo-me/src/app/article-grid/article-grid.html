@@ -1,0 +1,142 @@
+<div class="article-grid">
+  <div class="container">
+    <div class="grid-layout">
+      <!-- Main featured article -->
+      <article class="featured-article" *ngIf="getFilteredFeaturedArticle()">
+        <div class="article-image">
+          <img [src]="getFilteredFeaturedArticle()!.imageUrl" [alt]="getArticleTitle(getFilteredFeaturedArticle()!)">
+          <div class="article-category">{{ getArticleCategory(getFilteredFeaturedArticle()!) }}</div>
+        </div>
+        <div class="article-content">
+          <h2 class="article-title">
+            <a href="#">{{ getArticleTitle(getFilteredFeaturedArticle()!) }}</a>
+          </h2>
+          <div class="disinformation-warning" *ngIf="getFilteredFeaturedArticle()!.isDisinformation">
+            {{ getDisinformationWarning(getFilteredFeaturedArticle()!) }}
+          </div>
+          <p class="article-excerpt">
+            {{ getArticleExcerpt(getFilteredFeaturedArticle()!) }}
+          </p>
+          <div class="article-meta">
+            <span class="author">{{ getFilteredFeaturedArticle()!.author }}</span>
+            <span class="date">{{ getFilteredFeaturedArticle()!.date }}</span>
+            <span class="read-time">{{ getFilteredFeaturedArticle()!.readTime }} {{ isPolish() ? 'czytania' : 'read' }}</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Secondary articles -->
+      <div class="secondary-articles">
+        <article class="article-card" *ngFor="let article of getFilteredSecondaryArticles()">
+          <div class="article-image">
+            <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
+            <div class="article-category">{{ getArticleCategory(article) }}</div>
+          </div>
+          <div class="article-content">
+            <h3 class="article-title">
+              <a href="#">{{ getArticleTitle(article) }}</a>
+            </h3>
+            <div class="disinformation-warning" *ngIf="article.isDisinformation">
+              {{ getDisinformationWarning(article) }}
+            </div>
+            <p class="article-excerpt">
+              {{ getArticleExcerpt(article) }}
+            </p>
+            <div class="article-meta">
+              <span class="author">{{ article.author }}</span>
+              <span class="date">{{ article.date }}</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Category sections (only show when "All" is selected) -->
+      <div class="category-sections" *ngIf="shouldShowCategorySections()">
+        <div class="category-section" *ngFor="let category of getCategories()" [id]="'category-' + category.toLowerCase()">
+          <h3 class="category-title">{{ getCategoryTitle(category) }}</h3>
+          <div class="category-articles">
+            <article class="category-article" *ngFor="let article of getArticlesByCategory(category).slice(0, 3)">
+              <div class="category-article-image">
+                <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
+                <div class="article-category-small">{{ getArticleCategory(article) }}</div>
+              </div>
+              <div class="category-article-content">
+                <h4 class="category-article-title">
+                  <a href="#">{{ getArticleTitle(article) }}</a>
+                </h4>
+                <div class="disinformation-warning-small" *ngIf="article.isDisinformation">
+                  {{ getDisinformationWarning(article) }}
+                </div>
+                <div class="category-article-meta">
+                  <span class="author">{{ article.author }}</span>
+                  <span class="date">{{ article.date }}</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtered articles view (when specific category is selected) -->
+      <div class="filtered-articles" *ngIf="shouldShowFilteredArticles()">
+        <div class="filtered-articles-grid">
+          <article class="filtered-article" *ngFor="let article of getFilteredArticles()">
+            <div class="filtered-article-image">
+              <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
+              <div class="article-category-small">{{ getArticleCategory(article) }}</div>
+            </div>
+            <div class="filtered-article-content">
+              <h3 class="filtered-article-title">
+                <a href="#">{{ getArticleTitle(article) }}</a>
+              </h3>
+              <div class="disinformation-warning" *ngIf="article.isDisinformation">
+                {{ getDisinformationWarning(article) }}
+              </div>
+              <p class="filtered-article-excerpt">
+                {{ getArticleExcerpt(article) }}
+              </p>
+              <div class="filtered-article-meta">
+                <span class="author">{{ article.author }}</span>
+                <span class="date">{{ article.date }}</span>
+                <span class="read-time">{{ article.readTime }} {{ isPolish() ? 'czytania' : 'read' }}</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h4 class="sidebar-title">{{ isPolish() ? 'NAJNOWSZE' : 'LATEST' }}</h4>
+          <ul class="sidebar-articles">
+            <li *ngFor="let article of getSidebarArticles()">
+              <a href="#" class="sidebar-article">
+                <span class="sidebar-article-title">{{ getArticleTitle(article) }}</span>
+                <span class="sidebar-article-date">{{ article.date.split(' ')[0] }} {{ article.date.split(' ')[1] }}</span>
+                <div class="disinformation-warning-small" *ngIf="article.isDisinformation">
+                  {{ getDisinformationWarning(article) }}
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h4 class="sidebar-title">{{ isPolish() ? 'NAJCZYTANE' : 'MOST READ' }}</h4>
+          <ul class="sidebar-articles">
+            <li *ngFor="let article of getSecondaryArticles().slice(0, 3)">
+              <a href="#" class="sidebar-article">
+                <span class="sidebar-article-title">{{ getArticleTitle(article) }}</span>
+                <span class="sidebar-article-date">{{ article.date.split(' ')[0] }} {{ article.date.split(' ')[1] }}</span>
+                <div class="disinformation-warning-small" *ngIf="article.isDisinformation">
+                  {{ getDisinformationWarning(article) }}
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>

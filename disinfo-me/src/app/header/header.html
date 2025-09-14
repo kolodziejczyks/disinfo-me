@@ -1,0 +1,100 @@
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top-content">
+        <div class="date-info">
+          <span class="date">{{ currentDate() }}</span>
+          <span class="weather">Warszawa, 15°C</span>
+        </div>
+        <div class="header-actions">
+          <div class="language-switcher">
+            <button 
+              class="lang-btn" 
+              [class.active]="isPolish()"
+              (click)="switchLanguage('pl')">
+              PL
+            </button>
+            <button 
+              class="lang-btn" 
+              [class.active]="!isPolish()"
+              (click)="switchLanguage('en')">
+              EN
+            </button>
+          </div>
+          <a href="#" class="subscribe-btn">{{ isPolish() ? 'Prenumerata' : 'Subscribe' }}</a>
+          <a href="#" class="login-btn">{{ isPolish() ? 'Zaloguj się' : 'Login' }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="header-main">
+    <div class="container">
+      <div class="header-main-content">
+        <div class="logo">
+          <h1>Disinfo Me</h1>
+          <p class="tagline">{{ isPolish() ? 'Edukacyjny projekt o dezinformacji' : 'Educational project about disinformation' }}</p>
+        </div>
+        
+               <nav class="main-nav">
+                 <ul>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('ALL')" 
+                          (click)="selectCategory('ALL'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('ALL') }}
+                   </a></li>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('POLITYKA')" 
+                          (click)="selectCategory('POLITYKA'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('POLITYKA') }}
+                   </a></li>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('GOSPODARKA')" 
+                          (click)="selectCategory('GOSPODARKA'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('GOSPODARKA') }}
+                   </a></li>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('SPOŁECZEŃSTWO')" 
+                          (click)="selectCategory('SPOŁECZEŃSTWO'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('SPOŁECZEŃSTWO') }}
+                   </a></li>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('ŚWIAT')" 
+                          (click)="selectCategory('ŚWIAT'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('ŚWIAT') }}
+                   </a></li>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('KULTURA')" 
+                          (click)="selectCategory('KULTURA'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('KULTURA') }}
+                   </a></li>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('SPORT')" 
+                          (click)="selectCategory('SPORT'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('SPORT') }}
+                   </a></li>
+                   <li><a href="#" 
+                          [class.active]="isCategoryActive('OPINIE')" 
+                          (click)="selectCategory('OPINIE'); $event.preventDefault()">
+                        {{ getCategoryDisplayName('OPINIE') }}
+                   </a></li>
+                 </ul>
+               </nav>
+        
+        <div class="header-search">
+          <input type="text" [placeholder]="isPolish() ? 'Szukaj...' : 'Search...'" class="search-input">
+          <button class="search-btn">🔍</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="header-bottom">
+    <div class="container">
+      <div class="breaking-news">
+        <span class="breaking-label">{{ isPolish() ? 'NAJNOWSZE:' : 'LATEST:' }}</span>
+        <span class="breaking-text">{{ isPolish() ? 'Eksperci ostrzegają przed rosnącą falą dezinformacji w mediach społecznościowych' : 'Experts warn about growing wave of disinformation on social media' }}</span>
+      </div>
+    </div>
+  </div>
+</header>

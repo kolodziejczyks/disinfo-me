@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Disinfo Me</h4>
+        <p>{{ isPolish() ? 'Edukacyjny projekt o dezinformacji i fake newsach. Uczymy krytycznego myślenia i weryfikacji informacji.' : 'Educational project about disinformation and fake news. We teach critical thinking and information verification.' }}</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{{ isPolish() ? 'Kategorie' : 'Categories' }}</h4>
+        <ul>
+          <li><a href="#">{{ isPolish() ? 'Polityka' : 'Politics' }}</a></li>
+          <li><a href="#">{{ isPolish() ? 'Gospodarka' : 'Economy' }}</a></li>
+          <li><a href="#">{{ isPolish() ? 'Społeczeństwo' : 'Society' }}</a></li>
+          <li><a href="#">{{ isPolish() ? 'Technologia' : 'Technology' }}</a></li>
+          <li><a href="#">{{ isPolish() ? 'Edukacja' : 'Education' }}</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{{ isPolish() ? 'Narzędzia' : 'Tools' }}</h4>
+        <ul>
+          <li><a href="#">Fact-checking</a></li>
+          <li><a href="#">{{ isPolish() ? 'Weryfikacja źródeł' : 'Source verification' }}</a></li>
+          <li><a href="#">{{ isPolish() ? 'Przewodnik dla mediów' : 'Media guide' }}</a></li>
+          <li><a href="#">{{ isPolish() ? 'Materiały edukacyjne' : 'Educational materials' }}</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{{ isPolish() ? 'Kontakt' : 'Contact' }}</h4>
+        <p>Email: kontakt@disinfo-me.pl</p>
+        <p>{{ isPolish() ? 'Telefon' : 'Phone' }}: +48 123 456 789</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Disinfo Me. {{ isPolish() ? 'Wszystkie prawa zastrzeżone.' : 'All rights reserved.' }} | <a href="#">{{ isPolish() ? 'Polityka prywatności' : 'Privacy Policy' }}</a> | <a href="#">{{ isPolish() ? 'Regulamin' : 'Terms' }}</a></p>
+    </div>
+  </div>
+</footer>
