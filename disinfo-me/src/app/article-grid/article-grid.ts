@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { ArticleService, Article } from '../services/article';
 import { LanguageService } from '../services/language';
@@ -7,7 +8,7 @@ import { CategoryFilterService, Category } from '../services/category-filter';
 
 @Component({
   selector: 'app-article-grid',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './article-grid.html',
   styleUrl: './article-grid.scss'
 })
@@ -163,30 +164,5 @@ export class ArticleGridComponent {
     this.router.navigate(['/article', articleId]);
   }
 
-  getReadTimeText(): string {
-    if (this.isPolish()) return 'czytania';
-    if (this.isEnglish()) return 'read';
-    if (this.isGerman()) return 'Lesen';
-    if (this.isUkrainian()) return 'читання';
-    if (this.isRussian()) return 'чтения';
-    return 'read';
-  }
 
-  getLatestText(): string {
-    if (this.isPolish()) return 'NAJNOWSZE';
-    if (this.isEnglish()) return 'LATEST';
-    if (this.isGerman()) return 'NEUESTE';
-    if (this.isUkrainian()) return 'ОСТАННІ';
-    if (this.isRussian()) return 'ПОСЛЕДНИЕ';
-    return 'LATEST';
-  }
-
-  getMostReadText(): string {
-    if (this.isPolish()) return 'NAJCZYTANE';
-    if (this.isEnglish()) return 'MOST READ';
-    if (this.isGerman()) return 'MEIST GELESEN';
-    if (this.isUkrainian()) return 'НАЙЧИТАНІШІ';
-    if (this.isRussian()) return 'САМЫЕ ЧИТАЕМЫЕ';
-    return 'MOST READ';
-  }
 }

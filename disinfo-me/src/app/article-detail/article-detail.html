@@ -3,7 +3,7 @@
     <!-- Back button -->
     <div class="back-button">
       <button (click)="goBack()" class="btn-back">
-        ← {{ getBackText() }}
+        ← {{ 'article.back' | translate }}
       </button>
     </div>
 
@@ -17,7 +17,7 @@
       <div class="article-meta">
         <span class="author">{{ article.author }}</span>
         <span class="date">{{ article.date }}</span>
-        <span class="read-time">{{ article.readTime }} {{ isPolish() ? 'czytania' : 'read' }}</span>
+        <span class="read-time">{{ article.readTime }} {{ 'article.readTime' | translate }}</span>
       </div>
     </header>
 
@@ -34,7 +34,7 @@
 
       <!-- Extended content -->
       <div class="article-body">
-        <h2>{{ getDetailsText() }}</h2>
+        <h2>{{ 'article.details' | translate }}</h2>
         <p *ngIf="isPolish()">
           {{ getExtendedContent(article) }}
         </p>
@@ -48,7 +48,7 @@
 
     <!-- Related articles -->
     <aside class="related-articles" *ngIf="relatedArticles.length > 0">
-      <h3>{{ getRelatedArticlesText() }}</h3>
+      <h3>{{ 'article.relatedArticles' | translate }}</h3>
       <div class="related-grid">
         <article class="related-article" *ngFor="let relatedArticle of relatedArticles">
           <div class="related-image">
@@ -73,10 +73,10 @@
 
 <div class="article-not-found" *ngIf="!article">
   <div class="container">
-    <h1>{{ getArticleNotFoundText() }}</h1>
-    <p>{{ getArticleNotFoundDescription() }}</p>
+    <h1>{{ 'article.notFound' | translate }}</h1>
+    <p>{{ 'article.notFoundDescription' | translate }}</p>
     <button (click)="goBack()" class="btn-back">
-      {{ getBackText() }}
+      {{ 'article.back' | translate }}
     </button>
   </div>
 </div>

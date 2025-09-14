@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { LanguageService } from '../services/language';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-not-found',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   template: `
     <div class="not-found">
       <div class="container">
         <h1>404</h1>
-        <h2>{{ getNotFoundTitle() }}</h2>
-        <p>{{ getNotFoundMessage() }}</p>
+        <h2>{{ 'notFound.title' | translate }}</h2>
+        <p>{{ 'notFound.message' | translate }}</p>
         <button (click)="goHome()" class="btn-home">
-          {{ getHomeButtonText() }}
+          {{ 'notFound.backHome' | translate }}
         </button>
       </div>
     </div>
@@ -72,57 +72,7 @@ import { LanguageService } from '../services/language';
   `]
 })
 export class NotFoundComponent {
-  constructor(
-    private router: Router,
-    private languageService: LanguageService
-  ) {}
-
-  isPolish() {
-    return this.languageService.isPolish();
-  }
-
-  isEnglish() {
-    return this.languageService.isEnglish();
-  }
-
-  isGerman() {
-    return this.languageService.isGerman();
-  }
-
-  isUkrainian() {
-    return this.languageService.isUkrainian();
-  }
-
-  isRussian() {
-    return this.languageService.isRussian();
-  }
-
-  getNotFoundTitle(): string {
-    if (this.isPolish()) return 'Strona nie znaleziona';
-    if (this.isEnglish()) return 'Page Not Found';
-    if (this.isGerman()) return 'Seite nicht gefunden';
-    if (this.isUkrainian()) return 'Сторінку не знайдено';
-    if (this.isRussian()) return 'Страница не найдена';
-    return 'Page Not Found';
-  }
-
-  getNotFoundMessage(): string {
-    if (this.isPolish()) return 'Przepraszamy, ale strona, której szukasz, nie istnieje.';
-    if (this.isEnglish()) return 'Sorry, but the page you are looking for does not exist.';
-    if (this.isGerman()) return 'Entschuldigung, aber die Seite, nach der Sie suchen, existiert nicht.';
-    if (this.isUkrainian()) return 'Вибачте, але сторінка, яку ви шукаєте, не існує.';
-    if (this.isRussian()) return 'Извините, но страница, которую вы ищете, не существует.';
-    return 'Sorry, but the page you are looking for does not exist.';
-  }
-
-  getHomeButtonText(): string {
-    if (this.isPolish()) return 'Powrót do strony głównej';
-    if (this.isEnglish()) return 'Back to Home';
-    if (this.isGerman()) return 'Zurück zur Startseite';
-    if (this.isUkrainian()) return 'Повернутися на головну';
-    if (this.isRussian()) return 'Вернуться на главную';
-    return 'Back to Home';
-  }
+  constructor(private router: Router) {}
 
   goHome() {
     this.router.navigate(['/']);

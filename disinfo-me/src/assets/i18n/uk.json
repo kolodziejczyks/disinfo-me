@@ -1,0 +1,49 @@
+{
+  "header": {
+    "subscribe": "Підписатися",
+    "login": "Увійти",
+    "tagline": "Не вірьте в те, що читаєте",
+    "searchPlaceholder": "Пошук статей...",
+    "breakingNews": "ТЕРМІНОВО",
+    "breakingNewsContent": "Останні новини з Польщі та світу"
+  },
+  "navigation": {
+    "all": "Всі",
+    "politics": "Політика",
+    "economy": "Економіка",
+    "society": "Суспільство",
+    "world": "Світ",
+    "culture": "Культура",
+    "sports": "Спорт",
+    "opinions": "Думки"
+  },
+  "article": {
+    "readTime": "читання",
+    "latest": "Найновіші",
+    "mostRead": "Найчитаніші",
+    "back": "Назад",
+    "details": "Деталі",
+    "relatedArticles": "Пов'язані статті",
+    "notFound": "Статтю не знайдено",
+    "notFoundDescription": "Вибачте, але стаття, яку ви шукаєте, не існує."
+  },
+  "footer": {
+    "description": "Освітня платформа для навчання розпізнаванню дезінформації та маніпуляцій у ЗМІ.",
+    "categories": "Категорії",
+    "tools": "Інструменти",
+    "contact": "Контакт",
+    "phone": "Телефон",
+    "factChecking": "Перевірка фактів",
+    "sourceVerification": "Верифікація джерел",
+    "mediaGuide": "Медіа-посібник",
+    "educationalMaterials": "Навчальні матеріали",
+    "privacyPolicy": "Політика конфіденційності",
+    "terms": "Умови",
+    "allRightsReserved": "Всі права захищені."
+  },
+  "notFound": {
+    "title": "Сторінку не знайдено",
+    "message": "Вибачте, але сторінка, яку ви шукаєте, не існує.",
+    "backHome": "Повернутися на головну"
+  }
+}

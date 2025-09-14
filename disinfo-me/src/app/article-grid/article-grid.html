@@ -20,7 +20,7 @@
           <div class="article-meta">
             <span class="author">{{ getFeaturedArticle().author }}</span>
             <span class="date">{{ getFeaturedArticle().date }}</span>
-            <span class="read-time">{{ getFeaturedArticle().readTime }} {{ getReadTimeText() }}</span>
+            <span class="read-time">{{ getFeaturedArticle().readTime }} {{ 'article.readTime' | translate }}</span>
           </div>
         </div>
       </article>
@@ -102,7 +102,7 @@
       <!-- Sidebar -->
       <aside class="sidebar">
         <div class="sidebar-section">
-          <h4 class="sidebar-title">{{ getLatestText() }}</h4>
+          <h4 class="sidebar-title">{{ 'article.latest' | translate }}</h4>
           <ul class="sidebar-articles">
             <li *ngFor="let article of getSidebarArticles()">
               <div class="sidebar-article" (click)="goToArticle(article.id)">
@@ -114,7 +114,7 @@
         </div>
 
         <div class="sidebar-section">
-          <h4 class="sidebar-title">{{ getMostReadText() }}</h4>
+          <h4 class="sidebar-title">{{ 'article.mostRead' | translate }}</h4>
           <ul class="sidebar-articles">
             <li *ngFor="let article of getSecondaryArticles().slice(0, 3)">
               <div class="sidebar-article" (click)="goToArticle(article.id)">

@@ -39,8 +39,8 @@
                      RU
                    </button>
                  </div>
-          <button class="subscribe-btn">{{ getSubscribeText() }}</button>
-          <button class="login-btn">{{ getLoginText() }}</button>
+          <button class="subscribe-btn">{{ 'header.subscribe' | translate }}</button>
+          <button class="login-btn">{{ 'header.login' | translate }}</button>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
       <div class="header-main-content">
         <div class="logo">
           <h1>Disinfo Me</h1>
-          <p class="tagline">{{ getTaglineText() }}</p>
+          <p class="tagline">{{ 'header.tagline' | translate }}</p>
         </div>
         
                <nav class="main-nav">
@@ -60,55 +60,55 @@
                           [class.active]="isCategoryActive('ALL')" 
                           (click)="selectCategory('ALL')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('ALL') }}
+                        {{ 'navigation.all' | translate }}
                    </span></li>
                    <li><span 
                           [class.active]="isCategoryActive('POLITYKA')" 
                           (click)="selectCategory('POLITYKA')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('POLITYKA') }}
+                        {{ 'navigation.politics' | translate }}
                    </span></li>
                    <li><span 
                           [class.active]="isCategoryActive('GOSPODARKA')" 
                           (click)="selectCategory('GOSPODARKA')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('GOSPODARKA') }}
+                        {{ 'navigation.economy' | translate }}
                    </span></li>
                    <li><span 
                           [class.active]="isCategoryActive('SPOŁECZEŃSTWO')" 
                           (click)="selectCategory('SPOŁECZEŃSTWO')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('SPOŁECZEŃSTWO') }}
+                        {{ 'navigation.society' | translate }}
                    </span></li>
                    <li><span 
                           [class.active]="isCategoryActive('ŚWIAT')" 
                           (click)="selectCategory('ŚWIAT')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('ŚWIAT') }}
+                        {{ 'navigation.world' | translate }}
                    </span></li>
                    <li><span 
                           [class.active]="isCategoryActive('KULTURA')" 
                           (click)="selectCategory('KULTURA')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('KULTURA') }}
+                        {{ 'navigation.culture' | translate }}
                    </span></li>
                    <li><span 
                           [class.active]="isCategoryActive('SPORT')" 
                           (click)="selectCategory('SPORT')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('SPORT') }}
+                        {{ 'navigation.sports' | translate }}
                    </span></li>
                    <li><span 
                           [class.active]="isCategoryActive('OPINIE')" 
                           (click)="selectCategory('OPINIE')"
                           class="nav-link">
-                        {{ getCategoryDisplayName('OPINIE') }}
+                        {{ 'navigation.opinions' | translate }}
                    </span></li>
                  </ul>
                </nav>
         
         <div class="header-search">
-          <input type="text" [placeholder]="getSearchPlaceholder()" class="search-input">
+          <input type="text" [placeholder]="'header.searchPlaceholder' | translate" class="search-input">
           <button class="search-btn">🔍</button>
         </div>
       </div>
@@ -118,8 +118,8 @@
   <div class="header-bottom">
     <div class="container">
     <div class="breaking-news">
-      <span class="breaking-label">{{ getBreakingNewsText() }}</span>
-      <span class="breaking-text">{{ getBreakingNewsContent() }}</span>
+      <span class="breaking-label">{{ 'header.breakingNews' | translate }}</span>
+      <span class="breaking-text">{{ 'header.breakingNewsContent' | translate }}</span>
     </div>
     </div>
   </div>

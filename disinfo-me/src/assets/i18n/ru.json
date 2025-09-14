@@ -1,0 +1,49 @@
+{
+  "header": {
+    "subscribe": "Подписаться",
+    "login": "Войти",
+    "tagline": "Не верьте в то, что читаете",
+    "searchPlaceholder": "Поиск статей...",
+    "breakingNews": "СРОЧНО",
+    "breakingNewsContent": "Последние новости из Польши и мира"
+  },
+  "navigation": {
+    "all": "Все",
+    "politics": "Политика",
+    "economy": "Экономика",
+    "society": "Общество",
+    "world": "Мир",
+    "culture": "Культура",
+    "sports": "Спорт",
+    "opinions": "Мнения"
+  },
+  "article": {
+    "readTime": "чтения",
+    "latest": "Новейшие",
+    "mostRead": "Самые читаемые",
+    "back": "Назад",
+    "details": "Детали",
+    "relatedArticles": "Связанные статьи",
+    "notFound": "Статья не найдена",
+    "notFoundDescription": "Извините, но статья, которую вы ищете, не существует."
+  },
+  "footer": {
+    "description": "Образовательная платформа для обучения распознаванию дезинформации и манипуляций в СМИ.",
+    "categories": "Категории",
+    "tools": "Инструменты",
+    "contact": "Контакт",
+    "phone": "Телефон",
+    "factChecking": "Проверка фактов",
+    "sourceVerification": "Верификация источников",
+    "mediaGuide": "Медиа-руководство",
+    "educationalMaterials": "Образовательные материалы",
+    "privacyPolicy": "Политика конфиденциальности",
+    "terms": "Условия",
+    "allRightsReserved": "Все права защищены."
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "message": "Извините, но страница, которую вы ищете, не существует.",
+    "backHome": "Вернуться на главную"
+  }
+}

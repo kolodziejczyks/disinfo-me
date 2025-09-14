@@ -1,12 +1,13 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticleService, Article } from '../services/article';
 import { LanguageService } from '../services/language';
 
 @Component({
   selector: 'app-article-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './article-detail.html',
   styleUrl: './article-detail.scss'
 })
@@ -122,49 +123,4 @@ export class ArticleDetailComponent implements OnInit {
     return '';
   }
 
-  getBackText(): string {
-    if (this.isPolish()) return 'Powrót do strony głównej';
-    if (this.isEnglish()) return 'Back to main page';
-    if (this.isGerman()) return 'Zurück zur Hauptseite';
-    if (this.isUkrainian()) return 'Повернутися на головну сторінку';
-    if (this.isRussian()) return 'Вернуться на главную страницу';
-    return 'Back to main page';
-  }
-
-  getDetailsText(): string {
-    if (this.isPolish()) return 'Szczegóły';
-    if (this.isEnglish()) return 'Details';
-    if (this.isGerman()) return 'Details';
-    if (this.isUkrainian()) return 'Деталі';
-    if (this.isRussian()) return 'Детали';
-    return 'Details';
-  }
-
-
-  getRelatedArticlesText(): string {
-    if (this.isPolish()) return 'Powiązane artykuły';
-    if (this.isEnglish()) return 'Related articles';
-    if (this.isGerman()) return 'Verwandte Artikel';
-    if (this.isUkrainian()) return 'Пов\'язані статті';
-    if (this.isRussian()) return 'Похожие статьи';
-    return 'Related articles';
-  }
-
-  getArticleNotFoundText(): string {
-    if (this.isPolish()) return 'Artykuł nie został znaleziony';
-    if (this.isEnglish()) return 'Article not found';
-    if (this.isGerman()) return 'Artikel nicht gefunden';
-    if (this.isUkrainian()) return 'Статтю не знайдено';
-    if (this.isRussian()) return 'Статья не найдена';
-    return 'Article not found';
-  }
-
-  getArticleNotFoundDescription(): string {
-    if (this.isPolish()) return 'Przepraszamy, ale artykuł o podanym ID nie istnieje.';
-    if (this.isEnglish()) return 'Sorry, but the article with the given ID does not exist.';
-    if (this.isGerman()) return 'Entschuldigung, aber der Artikel mit der angegebenen ID existiert nicht.';
-    if (this.isUkrainian()) return 'Вибачте, але стаття з вказаним ID не існує.';
-    if (this.isRussian()) return 'Извините, но статья с указанным ID не существует.';
-    return 'Sorry, but the article with the given ID does not exist.';
-  }
 }

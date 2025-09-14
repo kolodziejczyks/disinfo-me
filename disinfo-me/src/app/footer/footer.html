@@ -3,34 +3,34 @@
     <div class="footer-content">
         <div class="footer-section">
           <h4>Disinfo Me</h4>
-          <p>{{ getDescriptionText() }}</p>
+          <p>{{ 'footer.description' | translate }}</p>
         </div>
       
       <div class="footer-section">
-        <h4>{{ isPolish() ? 'Kategorie' : 'Categories' }}</h4>
+        <h4>{{ 'footer.categories' | translate }}</h4>
         <ul>
-          <li><span>{{ isPolish() ? 'Polityka' : 'Politics' }}</span></li>
-          <li><span>{{ isPolish() ? 'Gospodarka' : 'Economy' }}</span></li>
-          <li><span>{{ isPolish() ? 'Społeczeństwo' : 'Society' }}</span></li>
-          <li><span>{{ isPolish() ? 'Technologia' : 'Technology' }}</span></li>
-          <li><span>{{ isPolish() ? 'Edukacja' : 'Education' }}</span></li>
+          <li><span>{{ 'navigation.politics' | translate }}</span></li>
+          <li><span>{{ 'navigation.economy' | translate }}</span></li>
+          <li><span>{{ 'navigation.society' | translate }}</span></li>
+          <li><span>{{ 'navigation.culture' | translate }}</span></li>
+          <li><span>{{ 'navigation.sports' | translate }}</span></li>
         </ul>
       </div>
       
       <div class="footer-section">
-        <h4>{{ isPolish() ? 'Narzędzia' : 'Tools' }}</h4>
+        <h4>{{ 'footer.tools' | translate }}</h4>
         <ul>
-          <li><span>Fact-checking</span></li>
-          <li><span>{{ isPolish() ? 'Weryfikacja źródeł' : 'Source verification' }}</span></li>
-          <li><span>{{ isPolish() ? 'Przewodnik dla mediów' : 'Media guide' }}</span></li>
-          <li><span>{{ isPolish() ? 'Materiały edukacyjne' : 'Educational materials' }}</span></li>
+          <li><span>{{ 'footer.factChecking' | translate }}</span></li>
+          <li><span>{{ 'footer.sourceVerification' | translate }}</span></li>
+          <li><span>{{ 'footer.mediaGuide' | translate }}</span></li>
+          <li><span>{{ 'footer.educationalMaterials' | translate }}</span></li>
         </ul>
       </div>
       
       <div class="footer-section">
-        <h4>{{ isPolish() ? 'Kontakt' : 'Contact' }}</h4>
+        <h4>{{ 'footer.contact' | translate }}</h4>
         <p>Email: szymon@disinfo-me.pl</p>
-        <p>{{ isPolish() ? 'Telefon' : 'Phone' }}: +48 123 456 789</p>
+        <p>{{ 'footer.phone' | translate }}: +48 123 456 789</p>
         <div class="social-links">
           <span aria-label="Facebook">📘</span>
           <span aria-label="Twitter">🐦</span>
@@ -40,7 +40,7 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; 2024 Disinfo Me. {{ isPolish() ? 'Wszystkie prawa zastrzeżone.' : 'All rights reserved.' }} | <span>{{ isPolish() ? 'Polityka prywatności' : 'Privacy Policy' }}</span> | <span>{{ isPolish() ? 'Regulamin' : 'Terms' }}</span></p>
+      <p>&copy; 2024 Disinfo Me. {{ 'footer.allRightsReserved' | translate }} | <span>{{ 'footer.privacyPolicy' | translate }}</span> | <span>{{ 'footer.terms' | translate }}</span></p>
     </div>
   </div>
 </footer>

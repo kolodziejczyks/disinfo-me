@@ -1,0 +1,49 @@
+{
+  "header": {
+    "subscribe": "Zapisz się",
+    "login": "Zaloguj się",
+    "tagline": "Nie wierz w to co czytasz",
+    "searchPlaceholder": "Szukaj artykułów...",
+    "breakingNews": "PILNE",
+    "breakingNewsContent": "Najnowsze informacje z Polski i świata"
+  },
+  "navigation": {
+    "all": "Wszystkie",
+    "politics": "Polityka",
+    "economy": "Gospodarka",
+    "society": "Społeczeństwo",
+    "world": "Świat",
+    "culture": "Kultura",
+    "sports": "Sport",
+    "opinions": "Opinie"
+  },
+  "article": {
+    "readTime": "czytania",
+    "latest": "Najnowsze",
+    "mostRead": "Najczęściej czytane",
+    "back": "Powrót",
+    "details": "Szczegóły",
+    "relatedArticles": "Powiązane artykuły",
+    "notFound": "Artykuł nie znaleziony",
+    "notFoundDescription": "Przepraszamy, ale artykuł którego szukasz nie istnieje."
+  },
+  "footer": {
+    "description": "Platforma edukacyjna do nauki rozpoznawania dezinformacji i manipulacji w mediach.",
+    "categories": "Kategorie",
+    "tools": "Narzędzia",
+    "contact": "Kontakt",
+    "phone": "Telefon",
+    "factChecking": "Fact-checking",
+    "sourceVerification": "Weryfikacja źródeł",
+    "mediaGuide": "Przewodnik dla mediów",
+    "educationalMaterials": "Materiały edukacyjne",
+    "privacyPolicy": "Polityka prywatności",
+    "terms": "Regulamin",
+    "allRightsReserved": "Wszystkie prawa zastrzeżone."
+  },
+  "notFound": {
+    "title": "Strona nie znaleziona",
+    "message": "Przepraszamy, ale strona, której szukasz, nie istnieje.",
+    "backHome": "Powrót do strony głównej"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "header": {
+    "subscribe": "Abonnieren",
+    "login": "Anmelden",
+    "tagline": "Glauben Sie nicht, was Sie lesen",
+    "searchPlaceholder": "Artikel suchen...",
+    "breakingNews": "EILMELDUNG",
+    "breakingNewsContent": "Neueste Nachrichten aus Polen und der Welt"
+  },
+  "navigation": {
+    "all": "Alle",
+    "politics": "Politik",
+    "economy": "Wirtschaft",
+    "society": "Gesellschaft",
+    "world": "Welt",
+    "culture": "Kultur",
+    "sports": "Sport",
+    "opinions": "Meinungen"
+  },
+  "article": {
+    "readTime": "Lesen",
+    "latest": "Neueste",
+    "mostRead": "Meistgelesen",
+    "back": "Zurück",
+    "details": "Details",
+    "relatedArticles": "Verwandte Artikel",
+    "notFound": "Artikel nicht gefunden",
+    "notFoundDescription": "Entschuldigung, aber der Artikel, den Sie suchen, existiert nicht."
+  },
+  "footer": {
+    "description": "Bildungsplattform zum Erlernen der Erkennung von Desinformation und Medienmanipulation.",
+    "categories": "Kategorien",
+    "tools": "Werkzeuge",
+    "contact": "Kontakt",
+    "phone": "Telefon",
+    "factChecking": "Faktenprüfung",
+    "sourceVerification": "Quellenverifikation",
+    "mediaGuide": "Medienleitfaden",
+    "educationalMaterials": "Bildungsmaterialien",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "terms": "Bedingungen",
+    "allRightsReserved": "Alle Rechte vorbehalten."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "message": "Entschuldigung, aber die Seite, nach der Sie suchen, existiert nicht.",
+    "backHome": "Zurück zur Startseite"
+  }
+}

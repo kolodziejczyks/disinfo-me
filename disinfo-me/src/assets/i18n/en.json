@@ -1,0 +1,49 @@
+{
+  "header": {
+    "subscribe": "Subscribe",
+    "login": "Login",
+    "tagline": "Don't believe what you read",
+    "searchPlaceholder": "Search articles...",
+    "breakingNews": "BREAKING",
+    "breakingNewsContent": "Latest news from Poland and the world"
+  },
+  "navigation": {
+    "all": "All",
+    "politics": "Politics",
+    "economy": "Economy",
+    "society": "Society",
+    "world": "World",
+    "culture": "Culture",
+    "sports": "Sports",
+    "opinions": "Opinions"
+  },
+  "article": {
+    "readTime": "read",
+    "latest": "Latest",
+    "mostRead": "Most Read",
+    "back": "Back",
+    "details": "Details",
+    "relatedArticles": "Related articles",
+    "notFound": "Article not found",
+    "notFoundDescription": "Sorry, but the article you are looking for does not exist."
+  },
+  "footer": {
+    "description": "Educational platform for learning to recognize disinformation and media manipulation.",
+    "categories": "Categories",
+    "tools": "Tools",
+    "contact": "Contact",
+    "phone": "Phone",
+    "factChecking": "Fact-checking",
+    "sourceVerification": "Source verification",
+    "mediaGuide": "Media guide",
+    "educationalMaterials": "Educational materials",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms",
+    "allRightsReserved": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "Sorry, but the page you are looking for does not exist.",
+    "backHome": "Back to Home"
+  }
+}
