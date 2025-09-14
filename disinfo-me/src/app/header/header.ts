@@ -1,12 +1,12 @@
 import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService, Language } from '../services/language';
 import { CategoryFilterService, Category } from '../services/category-filter';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })

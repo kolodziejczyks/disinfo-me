@@ -1,4 +1,5 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 export type Language = 'pl' | 'en' | 'de' | 'uk' | 'ru';
 
@@ -6,6 +7,7 @@ export type Language = 'pl' | 'en' | 'de' | 'uk' | 'ru';
   providedIn: 'root'
 })
 export class LanguageService {
+  private translate = inject(TranslateService);
   private currentLanguage = signal<Language>('pl');
 
   getCurrentLanguage() {
@@ -14,6 +16,7 @@ export class LanguageService {
 
   setLanguage(lang: Language) {
     this.currentLanguage.set(lang);
+    this.translate.use(lang);
   }
 
   isPolish() {
