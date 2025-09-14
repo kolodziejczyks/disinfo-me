@@ -2,51 +2,45 @@
   <div class="container">
     <div class="grid-layout">
       <!-- Main featured article -->
-      <article class="featured-article" *ngIf="getFilteredFeaturedArticle()" (click)="goToArticle(getFilteredFeaturedArticle()!.id)">
+      <article class="featured-article" *ngIf="getFeaturedArticle()" (click)="goToArticle(getFeaturedArticle().id)">
         <div class="article-image">
-          <img [src]="getFilteredFeaturedArticle()!.imageUrl" [alt]="getArticleTitle(getFilteredFeaturedArticle()!)">
-          <div class="article-category">{{ getArticleCategory(getFilteredFeaturedArticle()!) }}</div>
+          <img [src]="getFeaturedArticle().imageUrl" [alt]="getArticleTitle(getFeaturedArticle())">
+          <div class="article-category">{{ getArticleCategory(getFeaturedArticle()) }}</div>
         </div>
         <div class="article-content">
           <h2 class="article-title">
-            <a href="#" (click)="$event.preventDefault()">{{ getArticleTitle(getFilteredFeaturedArticle()!) }}</a>
+            {{ getArticleTitle(getFeaturedArticle()) }}
           </h2>
-          <div class="disinformation-warning" *ngIf="getFilteredFeaturedArticle()!.isDisinformation">
-            {{ getDisinformationWarning(getFilteredFeaturedArticle()!) }}
-          </div>
-          <div class="manipulation-question" *ngIf="getFilteredFeaturedArticle()!.isDisinformation">
-            {{ getManipulationQuestion(getFilteredFeaturedArticle()!) }}
+          <div class="disinformation-warning" *ngIf="getFeaturedArticle().isDisinformation">
+            {{ getDisinformationWarning(getFeaturedArticle()) }}
           </div>
           <div class="source-info">
-            {{ getSourceInfo(getFilteredFeaturedArticle()!) }}
+            {{ getSourceInfo(getFeaturedArticle()) }}
           </div>
           <p class="article-excerpt">
-            {{ getArticleExcerpt(getFilteredFeaturedArticle()!) }}
+            {{ getArticleExcerpt(getFeaturedArticle()) }}
           </p>
           <div class="article-meta">
-            <span class="author">{{ getFilteredFeaturedArticle()!.author }}</span>
-            <span class="date">{{ getFilteredFeaturedArticle()!.date }}</span>
-            <span class="read-time">{{ getFilteredFeaturedArticle()!.readTime }} {{ getReadTimeText() }}</span>
+            <span class="author">{{ getFeaturedArticle().author }}</span>
+            <span class="date">{{ getFeaturedArticle().date }}</span>
+            <span class="read-time">{{ getFeaturedArticle().readTime }} {{ getReadTimeText() }}</span>
           </div>
         </div>
       </article>
 
       <!-- Secondary articles -->
       <div class="secondary-articles">
-        <article class="article-card" *ngFor="let article of getFilteredSecondaryArticles()" (click)="goToArticle(article.id)">
+        <article class="article-card" *ngFor="let article of getSecondaryArticles()" (click)="goToArticle(article.id)">
           <div class="article-image">
             <img [src]="article.imageUrl" [alt]="getArticleTitle(article)">
             <div class="article-category">{{ getArticleCategory(article) }}</div>
           </div>
           <div class="article-content">
             <h3 class="article-title">
-              <a href="#" (click)="$event.preventDefault()">{{ getArticleTitle(article) }}</a>
+              {{ getArticleTitle(article) }}
             </h3>
             <div class="disinformation-warning" *ngIf="article.isDisinformation">
               {{ getDisinformationWarning(article) }}
-            </div>
-            <div class="manipulation-question" *ngIf="article.isDisinformation">
-              {{ getManipulationQuestion(article) }}
             </div>
             <div class="source-info">
               {{ getSourceInfo(article) }}

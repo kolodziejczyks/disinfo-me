@@ -85,14 +85,6 @@ export class ArticleGridComponent {
     return article.disinformationWarningEn;
   }
 
-  getManipulationQuestion(article: Article): string {
-    if (this.isPolish()) return article.manipulationQuestion || 'CZY ZNALAZŁEŚ MANIPULACJĘ?';
-    if (this.isEnglish()) return article.manipulationQuestionEn || 'DID YOU FIND THE MANIPULATION?';
-    if (this.isGerman()) return article.manipulationQuestionDe || 'HAST DU DIE MANIPULATION GEFUNDEN?';
-    if (this.isUkrainian()) return article.manipulationQuestionUk || 'ЧИ ЗНАЙШЛИ ВИ МАНІПУЛЯЦІЮ?';
-    if (this.isRussian()) return article.manipulationQuestionRu || 'НАШЛИ ЛИ ВЫ МАНИПУЛЯЦИЮ?';
-    return article.manipulationQuestionEn || 'DID YOU FIND THE MANIPULATION?';
-  }
 
   getSourceInfo(article: Article): string {
     if (article.sourceName && article.originalTitle) {

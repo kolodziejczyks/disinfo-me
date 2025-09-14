@@ -66,18 +66,6 @@
   animation: pulse 2s infinite;
 }
 
-.manipulation-question-large {
-  background: #fff3e0;
-  border: 3px solid #ff9800;
-  color: #e65100;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  animation: pulse-orange 2s infinite;
-}
 
 .source-info-large {
   background: #f5f5f5;
@@ -90,39 +78,6 @@
   font-style: italic;
 }
 
-.manipulation-answer {
-  background: #e8f5e8;
-  border: 2px solid #4caf50;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 30px 0;
-}
-
-.manipulation-answer h3 {
-  color: #2e7d32;
-  margin-bottom: 15px;
-}
-
-.answer-box {
-  background: white;
-  border: 1px solid #4caf50;
-  border-radius: 6px;
-  padding: 15px;
-  font-weight: 500;
-  color: #1b5e20;
-}
-
-@keyframes pulse-orange {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 152, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
-  }
-}
 
 .article-meta {
   display: flex;
@@ -360,13 +315,101 @@
   
   .article-title {
     font-size: 28px;
+    line-height: 1.2;
+  }
+  
+  .article-image img {
+    height: 300px;
+  }
+  
+  .related-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .disinformation-warning-large {
+    font-size: 16px;
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .source-info-large {
+    font-size: 13px;
+    padding: 12px;
+    margin: 15px 0;
+  }
+  
+  .article-meta {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  .article-excerpt {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .extended-content {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .disinformation-explanation {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-header,
+  .article-content,
+  .related-articles {
+    padding: 15px;
+  }
+  
+  .article-title {
+    font-size: 24px;
+    line-height: 1.1;
   }
   
   .article-image img {
     height: 250px;
   }
   
-  .related-grid {
-    grid-template-columns: 1fr;
+  .disinformation-warning-large {
+    font-size: 14px;
+    padding: 12px;
+    margin: 12px 0;
+  }
+  
+  .source-info-large {
+    font-size: 12px;
+    padding: 10px;
+    margin: 12px 0;
+  }
+  
+  .article-meta {
+    font-size: 13px;
+  }
+  
+  .article-excerpt {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  
+  .extended-content {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .disinformation-explanation {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .back-button {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }

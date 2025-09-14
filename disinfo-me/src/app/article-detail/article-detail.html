@@ -14,9 +14,6 @@
       <div class="disinformation-warning-large" *ngIf="article.isDisinformation">
         {{ getDisinformationWarning(article) }}
       </div>
-      <div class="manipulation-question-large" *ngIf="article.isDisinformation">
-        {{ getManipulationQuestion(article) }}
-      </div>
       <div class="source-info-large">
         {{ getSourceInfo(article) }}
       </div>
@@ -68,12 +65,6 @@
           <li *ngIf="!isPolish()">Use fact-checking tools</li>
         </ul>
 
-        <div class="manipulation-answer" *ngIf="article.isDisinformation">
-          <h3>{{ getManipulationQuestion(article) }}</h3>
-          <div class="answer-box">
-            {{ getManipulationAnswer(article) }}
-          </div>
-        </div>
       </div>
     </div>
 

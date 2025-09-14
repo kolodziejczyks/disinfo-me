@@ -109,23 +109,6 @@ export class ArticleDetailComponent implements OnInit {
     return article.disinformationExplanationEn || 'This is disinformation that has no scientific basis or facts.';
   }
 
-  getManipulationQuestion(article: Article): string {
-    if (this.isPolish()) return article.manipulationQuestion || 'CZY ZNALAZŁEŚ MANIPULACJĘ?';
-    if (this.isEnglish()) return article.manipulationQuestionEn || 'DID YOU FIND THE MANIPULATION?';
-    if (this.isGerman()) return article.manipulationQuestionDe || 'HAST DU DIE MANIPULATION GEFUNDEN?';
-    if (this.isUkrainian()) return article.manipulationQuestionUk || 'ЧИ ЗНАЙШЛИ ВИ МАНІПУЛЯЦІЮ?';
-    if (this.isRussian()) return article.manipulationQuestionRu || 'НАШЛИ ЛИ ВЫ МАНИПУЛЯЦИЮ?';
-    return article.manipulationQuestionEn || 'DID YOU FIND THE MANIPULATION?';
-  }
-
-  getManipulationAnswer(article: Article): string {
-    if (this.isPolish()) return article.manipulationAnswer || 'Sprawdź szczegóły w artykule.';
-    if (this.isEnglish()) return article.manipulationAnswerEn || 'Check the details in the article.';
-    if (this.isGerman()) return article.manipulationAnswerDe || 'Überprüfen Sie die Details im Artikel.';
-    if (this.isUkrainian()) return article.manipulationAnswerUk || 'Перевірте деталі в статті.';
-    if (this.isRussian()) return article.manipulationAnswerRu || 'Проверьте детали в статье.';
-    return article.manipulationAnswerEn || 'Check the details in the article.';
-  }
 
   getSourceInfo(article: Article): string {
     if (article.sourceName && article.originalTitle) {
